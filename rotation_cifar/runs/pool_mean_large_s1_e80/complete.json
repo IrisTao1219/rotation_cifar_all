@@ -1,0 +1,18 @@
+{
+  "best_score": 0.7316,
+  "last": {
+    "angle_accuracy": [
+      0.7298,
+      0.7298,
+      0.7298,
+      0.7298
+    ],
+    "mean_angle_accuracy": 0.7298,
+    "tta_accuracy": 0.7298,
+    "all_angles_correct_rate": 0.7298,
+    "direction_disagreement_rate": 0.0,
+    "some_angle_correct_but_tta_wrong": 0,
+    "canonical_accuracy": 0.7298
+  },
+  "seconds": 145.57524701100192
+}

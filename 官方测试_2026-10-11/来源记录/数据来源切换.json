@@ -1,0 +1,10 @@
+{
+  "recorded_utc": "2026-10-11T11:40:17.413997+00:00",
+  "reason": "Official tar download timed out after 240 seconds, 13552000 of 170498071 bytes; no archive decoded and no test predictions made",
+  "fallback": "Fixed public mirror uoft-cs/cifar10 test split",
+  "revision": "0b2714987fa478483af9968de7c934580d0bb9a2",
+  "test_file": "plain_text/test-00000-of-00001.parquet",
+  "expected_sha256": "841389e6f2d64f28bf17310e430aebac20ec3ba611a3c5e231dc93c645ce84de",
+  "sha256_source": "Hugging Face dataset tree API LFS oid at the fixed revision",
+  "models_or_selection_changed": false
+}

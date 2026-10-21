@@ -1,0 +1,10 @@
+{
+  "frozen_utc": "2026-10-11T11:38:14.236414+00:00",
+  "files_sha256": {
+    "evaluate_official_test.py": "f8587de158525a2d1c183959331bd785d410fca06efb4e005d9240d10b204757",
+    "prepare_official_test.py": "a935ed091491ca76a022e0625c84685a55c394a872b7f20158a39ab3a437f112",
+    "evaluation_lock.json": "b3902ae23bc46b318c908a4483393eb4ef56622bda021e4c573c93240e155737",
+    "评价协议.md": "440273dad14b6aff0c402f9615bea401c12c83fc20500559eeb050b69826f296"
+  },
+  "stage": "Before official test predictions; fixed model, fusion and analysis protocol"
+}

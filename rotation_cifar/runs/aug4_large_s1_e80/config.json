@@ -1,0 +1,10 @@
+{
+  "mode": "aug4_large",
+  "seed": 1,
+  "epochs": 80,
+  "train_images": 40000,
+  "parameters": 256830,
+  "batch_original_images": 256,
+  "crop_flip": true,
+  "selection": "tta_accuracy"
+}

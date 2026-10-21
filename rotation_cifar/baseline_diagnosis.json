@@ -1,0 +1,23 @@
+{
+  "simple_controls": {
+    "probability_mean": 0.5804,
+    "geometric_mean": 0.5804,
+    "confidence_weighted": 0.579,
+    "inverse_entropy_weighted": 0.5788,
+    "highest_confidence": 0.569
+  },
+  "direction_disagreement": 0.4818,
+  "some_view_correct_mean_wrong": 658,
+  "per_class_tta_accuracy": {
+    "airplane": 0.61,
+    "automobile": 0.692,
+    "bird": 0.432,
+    "cat": 0.374,
+    "deer": 0.482,
+    "dog": 0.514,
+    "frog": 0.764,
+    "horse": 0.56,
+    "ship": 0.692,
+    "truck": 0.684
+  }
+}

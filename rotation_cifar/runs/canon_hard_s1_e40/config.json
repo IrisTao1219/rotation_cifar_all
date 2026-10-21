@@ -1,0 +1,10 @@
+{
+  "mode": "canon_hard",
+  "seed": 1,
+  "epochs": 40,
+  "train_images": 40000,
+  "parameters": 74871,
+  "batch_original_images": 256,
+  "crop_flip": true,
+  "selection": "tta_accuracy"
+}

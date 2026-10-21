@@ -1,0 +1,288 @@
+{
+  "data": {
+    "train": {
+      "count": 40000,
+      "image_shape": [
+        40000,
+        3,
+        32,
+        32
+      ],
+      "image_dtype": "uint8",
+      "class_counts": [
+        4000,
+        4000,
+        4000,
+        4000,
+        4000,
+        4000,
+        4000,
+        4000,
+        4000,
+        4000
+      ]
+    },
+    "dev": {
+      "count": 5000,
+      "image_shape": [
+        5000,
+        3,
+        32,
+        32
+      ],
+      "image_dtype": "uint8",
+      "class_counts": [
+        500,
+        500,
+        500,
+        500,
+        500,
+        500,
+        500,
+        500,
+        500,
+        500
+      ]
+    },
+    "confirm": {
+      "count": 5000,
+      "image_shape": [
+        5000,
+        3,
+        32,
+        32
+      ],
+      "image_dtype": "uint8",
+      "class_counts": [
+        500,
+        500,
+        500,
+        500,
+        500,
+        500,
+        500,
+        500,
+        500,
+        500
+      ]
+    }
+  },
+  "runs": [
+    {
+      "run": "aug4_large_s1_e80",
+      "mode": "aug4_large",
+      "seed": 1,
+      "epochs": 80,
+      "parameters": 256830,
+      "selection": "tta_accuracy",
+      "best_dev_score": 0.7312,
+      "log_epochs": 80,
+      "confirmation_evaluated": true
+    },
+    {
+      "run": "aug4_large_s2_e80",
+      "mode": "aug4_large",
+      "seed": 2,
+      "epochs": 80,
+      "parameters": 256830,
+      "selection": "tta_accuracy",
+      "best_dev_score": 0.728,
+      "log_epochs": 80,
+      "confirmation_evaluated": true
+    },
+    {
+      "run": "aug4_large_s3_e80",
+      "mode": "aug4_large",
+      "seed": 3,
+      "epochs": 80,
+      "parameters": 256830,
+      "selection": "tta_accuracy",
+      "best_dev_score": 0.736,
+      "log_epochs": 80,
+      "confirmation_evaluated": true
+    },
+    {
+      "run": "aug4_s1_e40",
+      "mode": "aug4",
+      "seed": 1,
+      "epochs": 40,
+      "parameters": 62006,
+      "selection": "tta_accuracy",
+      "best_dev_score": 0.5804,
+      "log_epochs": 40,
+      "confirmation_evaluated": false
+    },
+    {
+      "run": "aug4_s1_e80",
+      "mode": "aug4",
+      "seed": 1,
+      "epochs": 80,
+      "parameters": 62006,
+      "selection": "tta_accuracy",
+      "best_dev_score": 0.623,
+      "log_epochs": 80,
+      "confirmation_evaluated": false
+    },
+    {
+      "run": "aug4_wide_s1_e40",
+      "mode": "aug4_wide",
+      "seed": 1,
+      "epochs": 40,
+      "parameters": 75762,
+      "selection": "tta_accuracy",
+      "best_dev_score": 0.5828,
+      "log_epochs": 40,
+      "confirmation_evaluated": false
+    },
+    {
+      "run": "aug4_wide_s1_e80",
+      "mode": "aug4_wide",
+      "seed": 1,
+      "epochs": 80,
+      "parameters": 75762,
+      "selection": "tta_accuracy",
+      "best_dev_score": 0.637,
+      "log_epochs": 80,
+      "confirmation_evaluated": false
+    },
+    {
+      "run": "aug_s1_e40",
+      "mode": "aug",
+      "seed": 1,
+      "epochs": 40,
+      "parameters": 62006,
+      "selection": "tta_accuracy",
+      "best_dev_score": 0.5552,
+      "log_epochs": 40,
+      "confirmation_evaluated": false
+    },
+    {
+      "run": "canon_aux_tta_s1_e40",
+      "mode": "canon_aux_tta",
+      "seed": 1,
+      "epochs": 40,
+      "parameters": 74871,
+      "selection": "tta_accuracy",
+      "best_dev_score": 0.5798,
+      "log_epochs": 40,
+      "confirmation_evaluated": false
+    },
+    {
+      "run": "canon_hard_s1_e40",
+      "mode": "canon_hard",
+      "seed": 1,
+      "epochs": 40,
+      "parameters": 74871,
+      "selection": "tta_accuracy",
+      "best_dev_score": 0.5918,
+      "log_epochs": 40,
+      "confirmation_evaluated": false
+    },
+    {
+      "run": "canon_soft_s1_e40",
+      "mode": "canon_soft",
+      "seed": 1,
+      "epochs": 40,
+      "parameters": 74871,
+      "selection": "tta_accuracy",
+      "best_dev_score": 0.6006,
+      "log_epochs": 40,
+      "confirmation_evaluated": false
+    },
+    {
+      "run": "plain_s1_e40",
+      "mode": "plain",
+      "seed": 1,
+      "epochs": 40,
+      "parameters": 62006,
+      "selection": "canonical_accuracy",
+      "best_dev_score": 0.6398,
+      "log_epochs": 40,
+      "confirmation_evaluated": false
+    },
+    {
+      "run": "pool_max_large_s1_e80",
+      "mode": "pool_max_large",
+      "seed": 1,
+      "epochs": 80,
+      "parameters": 256830,
+      "selection": "tta_accuracy",
+      "best_dev_score": 0.744,
+      "log_epochs": 80,
+      "confirmation_evaluated": true
+    },
+    {
+      "run": "pool_max_large_s2_e80",
+      "mode": "pool_max_large",
+      "seed": 2,
+      "epochs": 80,
+      "parameters": 256830,
+      "selection": "tta_accuracy",
+      "best_dev_score": 0.7534,
+      "log_epochs": 80,
+      "confirmation_evaluated": true
+    },
+    {
+      "run": "pool_max_large_s3_e80",
+      "mode": "pool_max_large",
+      "seed": 3,
+      "epochs": 80,
+      "parameters": 256830,
+      "selection": "tta_accuracy",
+      "best_dev_score": 0.7524,
+      "log_epochs": 80,
+      "confirmation_evaluated": true
+    },
+    {
+      "run": "pool_max_s1_e40",
+      "mode": "pool_max",
+      "seed": 1,
+      "epochs": 40,
+      "parameters": 62006,
+      "selection": "tta_accuracy",
+      "best_dev_score": 0.6004,
+      "log_epochs": 40,
+      "confirmation_evaluated": false
+    },
+    {
+      "run": "pool_max_s1_e80",
+      "mode": "pool_max",
+      "seed": 1,
+      "epochs": 80,
+      "parameters": 62006,
+      "selection": "tta_accuracy",
+      "best_dev_score": 0.6404,
+      "log_epochs": 80,
+      "confirmation_evaluated": false
+    },
+    {
+      "run": "pool_mean_large_s1_e80",
+      "mode": "pool_mean_large",
+      "seed": 1,
+      "epochs": 80,
+      "parameters": 256830,
+      "selection": "tta_accuracy",
+      "best_dev_score": 0.7316,
+      "log_epochs": 80,
+      "confirmation_evaluated": false
+    },
+    {
+      "run": "pool_mean_s1_e80",
+      "mode": "pool_mean",
+      "seed": 1,
+      "epochs": 80,
+      "parameters": 62006,
+      "selection": "tta_accuracy",
+      "best_dev_score": 0.6422,
+      "log_epochs": 80,
+      "confirmation_evaluated": false
+    }
+  ],
+  "checks": [
+    "All data shapes, labels, split IDs and split disjointness verified",
+    "Frozen source hashes match confirmation_lock.json",
+    "19 complete logs, 19 checkpoints and every prediction array verified; saved accuracy and macro-F1 recomputed",
+    "Development-selected fusion choices and paired confirmation accuracy gains reproduced from predictions"
+  ],
+  "all_checks_passed": true
+}

@@ -1,0 +1,45 @@
+{
+  "prepared_utc": "2026-10-11T11:41:27.515168+00:00",
+  "dataset": "official CIFAR-10 test",
+  "count": 10000,
+  "class_counts": [
+    1000,
+    1000,
+    1000,
+    1000,
+    1000,
+    1000,
+    1000,
+    1000,
+    1000,
+    1000
+  ],
+  "official_dataset_page": "https://www.cs.toronto.edu/~kriz/cifar.html",
+  "source_url": "https://huggingface.co/datasets/uoft-cs/cifar10/resolve/0b2714987fa478483af9968de7c934580d0bb9a2/plain_text/test-00000-of-00001.parquet",
+  "revision": "0b2714987fa478483af9968de7c934580d0bb9a2",
+  "checksum_reference": "Hugging Face fixed-revision LFS oid",
+  "test_parquet_sha256": "841389e6f2d64f28bf17310e430aebac20ec3ba611a3c5e231dc93c645ce84de",
+  "npz_sha256": "649e30712f51fc83b9225d31c8908c09c973b1a74ac47bb34ded9355a7c609d3",
+  "test_internal_exact_duplicate_count": 0,
+  "test_internal_orbit_duplicate_count": 0,
+  "overlap_audit": {
+    "train": {
+      "source_images": 40000,
+      "exact_overlap_test_ids": [],
+      "orbit_overlap_test_ids": []
+    },
+    "dev": {
+      "source_images": 5000,
+      "exact_overlap_test_ids": [],
+      "orbit_overlap_test_ids": []
+    },
+    "confirm": {
+      "source_images": 5000,
+      "exact_overlap_test_ids": [],
+      "orbit_overlap_test_ids": []
+    },
+    "any_training_source_orbit_overlap_test_ids": []
+  },
+  "overlap_policy": "full official set is primary; non-overlap analysis is secondary",
+  "near_duplicates_checked": false
+}

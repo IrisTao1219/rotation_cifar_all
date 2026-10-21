@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="通过神经网络结构图、数学公式和交互示例，解释四方向共享特征聚合模块及其课程实验收益。">
+<title>四方向共享特征聚合｜模块、公式与实验</title>
+<style>
+:root{--ink:#19312f;--muted:#586a68;--green:#08776a;--soft:#eaf5ef;--line:#d9e3dd;--paper:#f7f9f5;--white:#fff;--gold:#9c5d09;--gold-bg:#fff2da;--gray:#edf1ef;--sans:"PingFang SC","Microsoft YaHei",system-ui,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.8 var(--sans)}a{color:var(--green);text-underline-offset:4px}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #b87a22;outline-offset:4px}button{color:inherit}svg{display:block}::selection{background:#cde9d8}header{border-bottom:1px solid var(--line);background:rgba(247,249,245,.97);position:sticky;top:0;z-index:10}.nav{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:17px 28px}.brand{font-size:13px;font-weight:650;letter-spacing:1px}.brand span{color:var(--green);margin-right:12px}.nav nav{display:flex;gap:22px;flex-wrap:wrap}.nav a{color:var(--muted);font-size:13px;text-decoration:none}.nav a:hover{color:var(--green)}main{max-width:1200px;margin:auto;padding:0 28px}.hero{padding:64px 0 42px;display:grid;grid-template-columns:1fr 270px;gap:50px;align-items:end}.eyebrow{font-size:12px;letter-spacing:1.5px;color:var(--green);margin:0 0 14px;font-weight:650}h1{font-size:clamp(30px,4vw,48px);font-weight:650;letter-spacing:-1.5px;line-height:1.22;margin:0 0 20px}h2{font-size:28px;font-weight:650;line-height:1.4;letter-spacing:-.6px;margin:0 0 12px}h3{font-size:19px;line-height:1.5;margin:0 0 10px;font-weight:650}p{margin:0 0 15px}.lede{font-size:17px;color:var(--muted);max-width:720px;margin-bottom:12px}.subject{font-size:13px;color:var(--muted)}.hero-result{border-left:1px solid var(--line);padding:0 0 8px 30px}.hero-result small{font-size:12px;display:block;color:var(--muted)}.hero-result strong{display:block;font-size:54px;line-height:1.25;letter-spacing:-2px;font-weight:600}.hero-result strong span{font-size:17px;letter-spacing:0;margin-left:7px}.hero-result .from-to{font-size:16px;margin:8px 0;color:var(--green);font-variant-numeric:tabular-nums}.section{padding:42px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;align-items:flex-start;gap:30px;margin-bottom:24px}.section-head p{max-width:740px;color:var(--muted);margin:0}.tag{font-size:12px;white-space:nowrap;color:var(--green);padding:4px 10px;border:1px solid #bcd6c9;border-radius:30px}.switch{display:flex;gap:4px;flex-wrap:wrap;background:var(--gray);padding:5px;border-radius:9px;width:fit-content;margin-bottom:16px}.switch button{border:0;background:none;padding:9px 19px;border-radius:6px;font-size:14px}.switch button[aria-pressed="true"]{background:var(--ink);color:#fff}.diagram-panel{background:var(--white);border:1px solid var(--line);border-radius:14px;overflow:hidden}.diagram-heading{padding:20px 24px 0;display:flex;align-items:center;justify-content:space-between;gap:16px}.diagram-heading b{font-weight:600}.diagram-heading span{font-size:13px;color:var(--muted)}#network{width:100%;padding:0 10px}#network svg{width:100%;height:auto}.diagram-caption{padding:15px 24px;border-top:1px solid var(--line);font-size:14px;line-height:1.7;background:#fbfcfa}.diagram-caption b{color:var(--green)}.shared-note{font-size:13px;color:var(--muted);margin:12px 0 0}.encoder-detail{margin-top:24px}.tensor-flow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:15px 0}.tensor-step{padding:9px 12px;background:#eef3ee;border-radius:6px;min-width:130px}.tensor-step b{font-size:14px;display:block;font-weight:550}.tensor-step span{display:block;color:var(--muted);font-size:12px}.tensor-arrow{color:#81948d}.body-small{font-size:14px;color:var(--muted)}.formula-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 36px}.formula-block{padding:24px 0;border-top:1px solid var(--line);min-width:0}.formula-block .step{font-size:12px;color:var(--green);letter-spacing:1px;margin-bottom:8px}.formula-block p{font-size:14px;color:var(--muted);margin:12px 0 0}.equation{padding:16px 8px;overflow-x:auto;text-align:center;background:#fff;border-radius:8px;margin:12px 0}.equation.accent{background:var(--soft)}math{font-size:21px;font-family:"STIX Two Math","Cambria Math",math}.eq-note{font-size:12px;color:var(--muted)}.training{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:8px}.training>div{padding:22px 24px;background:#eef3ee;border-radius:10px;min-width:0}.training h3{font-size:16px}.training p{font-size:14px;color:var(--muted);margin:0}.training math{font-size:19px}.training .equation{background:transparent;padding:7px 0}.gradient{margin-top:20px;border-top:1px solid var(--line);padding-top:18px}.gradient summary{cursor:pointer;font-size:15px;font-weight:550}.gradient>p{font-size:14px;max-width:850px;margin-top:16px;color:var(--muted)}.gradient .equation{max-width:640px}.demo{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(240px,.8fr);gap:36px;align-items:start}.demo-board{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px;min-width:0}.demo-top{display:flex;align-items:center;gap:20px;justify-content:space-between;flex-wrap:wrap;margin-bottom:20px}.demo-top .status{font-size:13px;color:var(--muted)}.action{border:1px solid var(--line);border-radius:6px;background:#fff;padding:7px 14px;font-size:13px}.action:hover{background:var(--soft)}.matrix{display:grid;grid-template-columns:58px repeat(6,minmax(0,1fr));gap:7px;align-items:center;text-align:center;font-variant-numeric:tabular-nums}.matrix .column{font-size:13px;background:none;border:0;border-bottom:2px solid transparent;padding:5px 0}.matrix .column[aria-pressed="true"]{color:var(--green);border-bottom-color:var(--green);font-weight:650}.matrix .row-label{font-size:13px;color:var(--muted)}.cell{background:#f2f5f1;border-radius:4px;padding:8px 0;font-size:15px;transition:background .15s}.cell.winner{background:#e0f0e6;color:#145747;font-weight:650}.cell.picked{background:var(--gold-bg);outline:2px solid #c18d41;outline-offset:-2px;color:#764906}.output{margin-top:15px;padding-top:15px;border-top:1px solid var(--line)}.output .cell{background:var(--soft);color:var(--green);font-weight:650}.output .cell.picked{background:var(--gold-bg);color:#764906}.matrix-help{display:flex;flex-wrap:wrap;gap:16px;font-size:12px;color:var(--muted);margin-top:16px}.swatch{display:inline-block;width:10px;height:10px;margin-right:5px;border-radius:2px;background:#e0f0e6}.swatch.gold{background:#f3d399}.demo-explanation{padding-top:4px}.demo-explanation p{font-size:15px;color:var(--muted)}#selected-info{color:var(--ink);font-size:19px;line-height:1.7;min-height:64px}.proof{padding-top:22px;border-top:1px solid var(--line);margin-top:22px}.proof math{font-size:20px}.proof .equation{background:transparent;padding:8px 0}.results-grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(220px,.7fr);gap:38px;align-items:start}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums}caption{text-align:left;font-size:13px;color:var(--muted);padding-bottom:16px}th,td{padding:13px 12px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}th{font-size:12px;color:var(--muted);font-weight:500}th:first-child,td:first-child{text-align:left;padding-left:0}tr.method td{color:var(--green);font-weight:650}tfoot td{font-size:13px;border-bottom:0}.result-side{padding:22px 24px;background:var(--soft);border-radius:12px}.result-side .number{font-size:28px;letter-spacing:-.5px;line-height:1.4}.result-side p{font-size:13px;color:var(--muted);margin:8px 0}.result-side hr{border:0;border-top:1px solid #c9ddce;margin:17px 0}.protocol{font-size:14px;color:var(--muted);max-width:960px;margin-top:22px}.boundary{display:grid;grid-template-columns:1fr 1fr;gap:40px}.boundary p{font-size:15px;color:var(--muted)}.boundary strong{color:var(--ink);font-weight:600}.sources{display:flex;gap:15px 24px;flex-wrap:wrap;font-size:13px;margin-top:22px}.sources a{display:inline-block}footer{max-width:1200px;padding:24px 28px 40px;margin:auto;color:var(--muted);font-size:12px;border-top:1px solid var(--line)}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:900px){.hero{grid-template-columns:1fr 230px;gap:24px}.hero-result{padding-left:22px}.demo{grid-template-columns:1fr}.demo-explanation{display:grid;grid-template-columns:1fr 1fr;gap:28px}.proof{margin:0;padding:0 0 0 24px;border-top:0;border-left:1px solid var(--line)}.results-grid{grid-template-columns:1fr}.result-side{display:grid;grid-template-columns:1fr 1fr;gap:24px}.result-side hr{display:none}.training{gap:20px}.training>div{padding:16px}}
+@media(max-width:620px){.nav{padding:12px 20px;gap:7px;align-items:flex-start;flex-direction:column}.nav nav{gap:18px}.nav a{font-size:12px}.brand{font-size:11px}main{padding:0 20px}.hero{padding:38px 0 30px;grid-template-columns:1fr;gap:16px}.hero-result{border-left:0;border-top:1px solid var(--line);padding:18px 0 0;display:grid;grid-template-columns:1fr auto;align-items:center}.hero-result strong{font-size:40px;grid-column:2;grid-row:1/3}.hero-result .from-to{margin:3px 0}.hero-result small:last-child{grid-column:1/-1}h1{font-size:34px}h2{font-size:24px}.lede{font-size:15px}.section{padding:30px 0}.section-head{gap:12px;margin-bottom:20px;display:block}.section-head .tag{display:inline-block;margin-top:14px}.section-head p{font-size:14px}.diagram-heading{padding:16px 16px 0;display:block;font-size:14px}.diagram-heading span{display:block;font-size:12px}.diagram-caption{padding:14px 16px}.formula-grid,.training,.boundary{grid-template-columns:1fr;gap:0}.formula-block{padding:20px 0}.training>div{margin-top:12px}.demo-board{padding:16px 12px}.matrix{grid-template-columns:38px repeat(6,minmax(0,1fr));gap:4px}.cell{font-size:13px;padding:7px 0}.matrix .column,.matrix .row-label{font-size:12px}.demo-explanation{display:block}.proof{border-left:0;border-top:1px solid var(--line);padding:20px 0 0;margin:20px 0 0}.result-side{grid-template-columns:1fr;gap:10px}.result-side .number{font-size:25px}th,td{padding:11px 8px;font-size:12px}caption{font-size:12px}.tensor-flow{gap:8px}.tensor-step{min-width:120px;flex:1}.tensor-arrow{display:none}math{font-size:19px}.training math{font-size:17px}.boundary>div+div{margin-top:20px}footer{padding:22px 20px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cell{transition:none}}
+@media print{header{position:static}.nav nav,.switch,.action{display:none}body{background:white;color:#111;font-size:11pt}main{padding:0}.hero{padding:20px 0}.section{padding:24px 0}.diagram-panel,.demo-board,.formula-block,.training>div,.result-side{break-inside:avoid}a{color:inherit}footer{padding:16px 0}h1{font-size:28pt}h2{font-size:19pt}.hero-result strong{font-size:32pt}}
+</style>
+</head>
+<body>
+<header><div class="nav"><div class="brand"><span>ML COURSE</span>模块 · 公式 · 验证</div><nav aria-label="页面章节"><a href="#architecture">网络结构</a><a href="#mathematics">数学表达</a><a href="#interactive">聚合演示</a><a href="#evidence">实验效果</a><a href="#contribution">创新边界</a></nav></div></header>
+<main>
+<section class="hero">
+ <div><p class="eyebrow">课程改进模块 / FOUR-VIEW FEATURE POOLING</p><h1>四方向共享特征聚合</h1><p class="lede">在分类之前，汇聚四个旋转方向的特征。每个特征维度独立选择响应较大的方向，再由同一个分类头作出判断。</p><p class="subject">基于多方向特征融合的旋转鲁棒图像分类研究</p></div>
+ <div class="hero-result"><small>官方测试 · 相对预先选定的简单融合</small><strong id="hero-gain"></strong><div class="from-to" id="hero-accuracy"></div><small>10,000 张原图 · 3 个配对随机种子</small></div>
+</section>
+
+<section id="architecture" class="section">
+ <div class="section-head"><div><h2>改变发生在分类头之前</h2><p>对同一张图像构造四个直角旋转视图。两种方法使用相同规模的网络、相同数量的视图，主要差别是融合位置与训练时的监督对象。</p></div><span class="tag">模块新增参数 0</span></div>
+ <div class="switch" role="group" aria-label="选择网络结构"><button type="button" id="show-module" aria-pressed="true">当前模块：先聚合特征</button><button type="button" id="show-baseline" aria-pressed="false">简单对照：先分别分类</button></div>
+ <div class="diagram-panel"><div class="diagram-heading"><b id="diagram-title">四方向特征最大聚合</b><span id="diagram-subtitle">4 × 1600 → 1600 → 10</span></div><div id="network"></div><div class="diagram-caption" id="diagram-caption" aria-live="polite"></div></div>
+ <p class="shared-note">“共享”指同一个模型的四个方向共用编码器参数；对照与模块各自独立训练。输入图片仅用于展示旋转，不表示该样本的分类结果。</p>
+ <div class="encoder-detail"><h3>展开共享编码器</h3><div class="tensor-flow">
+ <div class="tensor-step"><b>3 × 32 × 32</b><span>RGB 输入</span></div><span class="tensor-arrow">→</span>
+ <div class="tensor-step"><b>32 × 28 × 28</b><span>5 × 5 卷积 + ReLU</span></div><span class="tensor-arrow">→</span>
+ <div class="tensor-step"><b>32 × 14 × 14</b><span>2 × 2 最大池化</span></div><span class="tensor-arrow">→</span>
+ <div class="tensor-step"><b>64 × 10 × 10</b><span>5 × 5 卷积 + ReLU</span></div><span class="tensor-arrow">→</span>
+ <div class="tensor-step"><b>64 × 5 × 5</b><span>2 × 2 最大池化</span></div><span class="tensor-arrow">→</span>
+ <div class="tensor-step"><b>1600</b><span>展平特征向量</span></div>
+ </div><p class="body-small">分类头为 1600 → 120 → 84 → 10，两个隐藏层后接 ReLU。卷积均不补零。两种方法均为 <strong>256,830</strong> 个参数，均编码四个方向；“不增加参数”不代表相对单视图没有额外计算。</p></div>
+</section>
+
+<section id="mathematics" class="section">
+ <div class="section-head"><div><h2>结构图对应的数学表达</h2><p>记 x 为经过预处理的图像，y 为类别标签，f 为编码器，g 为分类头。下标 m 表示当前模块的参数，下标 b 表示对照模型的参数。</p></div></div>
+ <div class="formula-grid">
+ <article class="formula-block"><div class="step">视图生成与共享编码</div><h3>同一张图像，四个方向</h3>
+ <div class="equation"><math display="block" aria-label="h r 等于共享编码器作用于旋转 r 的输入，属于 1600 维实数空间"><mrow><msub><mi>h</mi><mi>r</mi></msub><mo>=</mo><msub><mi>f</mi><msub><mi>θ</mi><mi>m</mi></msub></msub><mo>(</mo><msub><mi>R</mi><mi>r</mi></msub><mi>x</mi><mo>)</mo><mo>∈</mo><msup><mi>ℝ</mi><mn>1600</mn></msup></mrow></math></div>
+ <p>r ∈ {0, 1, 2, 3}，R<sub>r</sub> 表示逆时针旋转 90r°。四个向量形成 H ∈ ℝ<sup>4×1600</sup>。它们来自同一组编码器参数，不是四个独立网络。</p></article>
+ <article class="formula-block"><div class="step">核心接入模块</div><h3>沿方向维，逐特征取最大值</h3>
+ <div class="equation accent"><math display="block" aria-label="第 j 个聚合特征 z j 等于四个方向中第 j 个特征的最大值"><mrow><msub><mi>z</mi><mi>j</mi></msub><mo>=</mo><munder><mo>max</mo><mrow><mi>r</mi><mo>∈</mo><mo>{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>}</mo></mrow></munder><msub><mi>H</mi><mrow><mi>r</mi><mo>,</mo><mi>j</mi></mrow></msub></mrow></math></div>
+ <p>j = 1, …, 1600。不同维度可以由不同方向提供最大值，因此聚合结果不是挑选某一个方向的完整向量。这里聚合的是<strong>方向维</strong>，区别于编码器内部的空间池化。</p></article>
+ <article class="formula-block"><div class="step">聚合后分类</div><h3>一个特征向量，一次分类</h3>
+ <div class="equation"><math display="block" aria-label="模块预测等于聚合特征经过分类头后取 softmax"><mrow><msup><mi>p</mi><mi>m</mi></msup><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mi mathvariant="normal">softmax</mi><mo>(</mo><msub><mi>g</mi><msub><mi>φ</mi><mi>m</mi></msub></msub><mo>(</mo><mi>z</mi><mo>)</mo><mo>)</mo></mrow></math></div>
+ <p>分类头可以利用来自多个方向的特征组合。最大响应只是聚合规则，不等于“正确信息”；是否带来收益，需要与同视图数量的简单融合比较。</p></article>
+ <article class="formula-block"><div class="step">预测平均对照</div><h3>四次分类，之后平均概率</h3>
+ <div class="equation"><math display="block" aria-label="对照预测是四个方向分类概率的算术平均"><mrow><msup><mover><mi>p</mi><mo>¯</mo></mover><mi>b</mi></msup><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><munderover><mo>∑</mo><mrow><mi>r</mi><mo>=</mo><mn>0</mn></mrow><mn>3</mn></munderover><msubsup><mi>p</mi><mi>r</mi><mi>b</mi></msubsup><mo>(</mo><mi>x</mi><mo>)</mo></mrow></math></div>
+ <div class="eq-note">其中 p<sup>b</sup><sub>r</sub>(x) = softmax(g<sub>φb</sub>(f<sub>θb</sub>(R<sub>r</sub>x)))。</div><p>此时每个方向的特征已经压缩为 10 维类别概率。图中以概率平均说明结构；主实验还允许在开发集预先选定几何平均作为更强的简单对照。</p></article>
+ </div>
+ <div class="training">
+ <div><h3>对照：每个视图分别接受类别监督</h3><div class="equation"><math display="block" aria-label="对照训练损失是全部原图与四个方向的交叉熵平均"><mrow><msub><mi>ℒ</mi><mi>b</mi></msub><mo>=</mo><mo>−</mo><mfrac><mn>1</mn><mrow><mn>4</mn><mi>N</mi></mrow></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><munderover><mo>∑</mo><mrow><mi>r</mi><mo>=</mo><mn>0</mn></mrow><mn>3</mn></munderover><mi mathvariant="normal">log</mi><msubsup><mi>p</mi><mrow><mi>r</mi><mo>,</mo><msub><mi>y</mi><mi>i</mi></msub></mrow><mi>b</mi></msubsup><mo>(</mo><msub><mi>x</mi><mi>i</mi></msub><mo>)</mo></mrow></math></div><p>训练要求各方向分别分类正确；预测融合发生在推理阶段。</p></div>
+ <div><h3>当前模块：监督聚合后的分类结果</h3><div class="equation"><math display="block" aria-label="模块损失是聚合后预测的交叉熵平均"><mrow><msub><mi>ℒ</mi><mi>m</mi></msub><mo>=</mo><mo>−</mo><mfrac><mn>1</mn><mi>N</mi></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><mi mathvariant="normal">log</mi><msubsup><mi>p</mi><msub><mi>y</mi><mi>i</mi></msub><mi>m</mi></msubsup><mo>(</mo><msub><mi>x</mi><mi>i</mi></msub><mo>)</mo></mrow></math></div><p>编码器与分类头围绕聚合表示端到端训练。实际实现没有另加注意力、方向评分或一致性损失。</p></div>
+ </div>
+ <details class="gradient"><summary>训练时，梯度如何通过最大聚合传回编码器？</summary><p>在第 j 维有唯一最大值时，令 r*<sub>j</sub> 为该最大值对应的方向，梯度只经过这个方向的第 j 维，再传回共享编码器。不同维度的梯度可以来自不同方向。若最大值并列，当前 PyTorch 实现选择首个最大值索引。</p><div class="equation"><math display="block" aria-label="对 H r j 的损失梯度等于方向被选中的指示函数乘以对 z j 的梯度"><mrow><mfrac><mrow><mo>∂</mo><mi>ℒ</mi></mrow><mrow><mo>∂</mo><msub><mi>H</mi><mrow><mi>r</mi><mo>,</mo><mi>j</mi></mrow></msub></mrow></mfrac><mo>=</mo><mn>1</mn><mo>[</mo><mi>r</mi><mo>=</mo><msubsup><mi>r</mi><mi>j</mi><mo>*</mo></msubsup><mo>]</mo><mfrac><mrow><mo>∂</mo><mi>ℒ</mi></mrow><mrow><mo>∂</mo><msub><mi>z</mi><mi>j</mi></msub></mrow></mfrac></mrow></math></div></details>
+</section>
+
+<section id="interactive" class="section">
+ <div class="section-head"><div><h2>每一维，可以来自不同方向</h2><p>点击某个特征维度，观察它选择的方向；再将输入旋转 90°，观察方向顺序与聚合结果的变化。</p></div><span class="tag">教学数值 · 非模型实测特征</span></div>
+ <div class="demo"><div class="demo-board"><div class="demo-top"><div><b>H：4 个方向 × 6 个示例特征</b><div class="status" id="rotation-status" aria-live="polite">输入相对原图旋转 0°</div></div><button class="action" id="rotate-demo" type="button">输入旋转 90° ↺</button></div><div id="feature-matrix" class="matrix" aria-label="四方向特征矩阵"></div><div id="max-output" class="matrix output" aria-label="逐维最大聚合结果"></div><div class="matrix-help"><span><i class="swatch"></i>该列最大值</span><span><i class="swatch gold"></i>当前选中的维度</span></div></div>
+ <div class="demo-explanation"><div><h3>逐维选择，不是整图选方向</h3><p id="selected-info" aria-live="polite"></p><p>六个示例维度的最大值来自不同方向，合在一起才得到最终表示。真实网络处理的是 1600 维，规则完全相同。</p></div><div class="proof"><h3>为什么四方向旋转不改变结果？</h3><div class="equation"><math display="block" aria-label="输入旋转会重排方向特征，聚合向量保持不变"><mtable><mtr><mtd><mrow><msub><mi>h</mi><mi>r</mi></msub><mo>(</mo><msub><mi>R</mi><mi>k</mi></msub><mi>x</mi><mo>)</mo><mo>=</mo><msub><mi>h</mi><mrow><mo>(</mo><mi>r</mi><mo>+</mo><mi>k</mi><mo>)</mo><mspace width=".2em"/><mi mathvariant="normal">mod</mi><mspace width=".2em"/><mn>4</mn></mrow></msub><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mtd></mtr><mtr><mtd><mrow><mi>z</mi><mo>(</mo><msub><mi>R</mi><mi>k</mi></msub><mi>x</mi><mo>)</mo><mo>=</mo><mi>z</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mtd></mtr></mtable></math></div><p>在完整四视图、确定性推理下，旋转输入只会重排四行，逐列最大值不变。<strong>四方向预测平均也有这一性质</strong>，所以分类收益才是新增模块的主要验证依据。</p></div></div></div>
+</section>
+
+<section id="evidence" class="section">
+ <div class="section-head"><div><h2>用分类收益验证模块</h2><p>固定模型与对照融合方式后，在 CIFAR-10 官方测试集上评价。以下为 3 次独立训练的结果，不是把三个模型集成后的准确率。</p></div><span class="tag">已有实验结果</span></div>
+ <div class="results-grid"><div class="table-wrap"><table><caption>准确率（%） · 均值 ± 随机种子样本标准差</caption><thead><tr><th scope="col">方法</th><th scope="col">种子 1</th><th scope="col">种子 2</th><th scope="col">种子 3</th><th scope="col">均值 ± SD</th></tr></thead><tbody id="result-rows"></tbody><tfoot><tr id="gain-row"></tr></tfoot></table></div><div class="result-side"><div><small>主对照 → 特征最大聚合</small><div class="number" id="f1-result"></div><p>宏平均 F1</p></div><hr><div><small>准确率配对收益的 95% 区间</small><div class="number" id="interval-result"></div><p>个百分点 · 5,000 次 bootstrap<br>按原图与配对训练种子重采样</p></div></div></div>
+ <p class="protocol">主对照的融合方式在开发集确定：种子 1、3 使用概率平均，种子 2 使用几何平均。两种方法均使用 40,000 张训练图像、80 轮训练和四方向编码，参数量相同。测试集包含 10,000 张原图；同一原图的旋转视图不作为独立样本。</p>
+ <p class="protocol">三个种子的准确率均提高，10 类中有 8 类平均召回提高，狗和马略有下降。这里只有 3 个种子，置信区间描述本次数据与训练重复下的不确定性。尚未验证任意角度、其他骨干或真实拍摄分布，也未据此得出推理延迟改善的结论。</p>
+</section>
+
+<section id="contribution" class="section">
+ <div class="section-head"><div><h2>这项课程工作的创新如何表述</h2><p>把课程基线上的结构改进，与聚合算法的学术原创性区分开。</p></div></div>
+ <div class="boundary"><div><h3>可以认领的工作</h3><p><strong>借鉴 TI-pooling 的变换不变池化思想，针对离散旋转分类场景构建并接入四方向共享特征聚合模块。</strong>将融合位置前移到分类头之前，完成端到端训练适配，并通过同容量、同视图数量的对照和多种子测试验证收益。</p><p>相对课程基线，改变的是特征进入分类头的方式以及监督作用的位置；错误诊断、模块实现与实验验证共同构成本项目的工作。</p></div><div><h3>已有思想与当前范围</h3><p>共享编码和跨变换逐维最大聚合的核心机制已有 TI-pooling 工作提出。当前方案属于<strong>课程层面的模块适配与结构改进</strong>，没有证明相对于 TI-pooling 提出了新的聚合算法。</p><p>预测平均和特征最大聚合都具有四方向不变性。模块的实际贡献由超过合理简单对照的分类效果支持，当前主结果为 <strong>+1.52 个百分点</strong>。</p></div></div>
+ <div class="sources"><a href="https://github.com/dlaptev/TI-pooling" target="_blank" rel="noopener noreferrer">TI-pooling 论文与作者代码 ↗</a><a href="https://docs.pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html" target="_blank" rel="noopener noreferrer">PyTorch 分类教程 ↗</a><a href="../官方测试_2026-10-11/官方测试结果报告.md">官方测试报告</a><a href="../官方测试_2026-10-11/results.json">原始指标</a><a href="../rotation_cifar/experiment.py">模型实现</a></div>
+</section>
+</main>
+<footer>实验依据：已归档的 2026 年 10 月 11 日官方测试结果。结构尺寸与训练公式对应实际实现；交互矩阵使用明确标注的教学数值。页面本身包含全部图形、公式与演示，离线可用。复查文件链接需保留原项目目录。</footer>
+<noscript><p style="padding:24px">当前浏览器禁用了 JavaScript。数学公式与说明仍可阅读；请启用 JavaScript 以查看网络图、交互演示和结果表。</p></noscript>
+<script id="verified-data" type="application/json">{"methods":{"baseline_mean":{"accuracy_by_seed":[0.7263,0.7247,0.7362],"mean_accuracy":0.7290666666666666,"sd_accuracy":0.006229232162420437,"mean_macro_f1":0.727479902641997},"baseline_selected":{"accuracy_by_seed":[0.7263,0.7263,0.7362],"mean_accuracy":0.7295999999999999,"sd_accuracy":0.005715767664977307,"mean_macro_f1":0.728146277024714},"feature_max":{"accuracy_by_seed":[0.7421,0.7451,0.7473],"mean_accuracy":0.7448333333333333,"sd_accuracy":0.0026102362600602443,"mean_macro_f1":0.7431321242130376}},"primary_comparison":{"image_count":10000,"difference_by_seed":[0.0158,0.0188,0.0111],"mean_difference":0.015233333333333333,"paired_image_and_seed_bootstrap_95_interval":[0.0079325,0.022234166666666656],"bootstrap_draws":5000,"bootstrap_units":"original images and paired training seeds"}}</script>
+<script>
+'use strict';
+const report=JSON.parse(document.getElementById('verified-data').textContent);
+const sample='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAJiklEQVR4nEVWWW9cV3I+692X7mY3uylSpCiJ1jLyMsh4HIyNgceTAHGAPASY9zwE+U+Zt/kBAyQIkGSczIwRyZIMS5YlS6ZIijR3Us3eb9/1bDW4loFUvZxzUHVOFep89RUGkNpoADAYIYQIIAwIAODNlpB6iTFGtf4o8IMiVB///xlCBl4+ez6ajv/6ow8ty3rjSJTRSqmXLzZH/QFGWEr51Rf37/3xT0pIBCCVQgaM0dIobbTRWmmljDRGG6OV1soYpWsxRoNShy93nt3/SiilzY9C6pcRHp6/no8mBKPjo/3tJ1+f7OzMRuOqqoCRZDSu8gyQNkgj0AgZjJGoClHkCCODABDUT0mJGGq14pCzdDb5MTlAxEDtQAmdDAfHW1t3/+0/RgcHpsyfPLz/+P49UxUPPv/zye6+TVjtQXCZ51rKvVe7m8+/syjHBlmEjfoX25vbRVn1B+eDw72v//ezqiikrJOu3cCAKqt7f/o85MiRqcqm3+8kk+NzK/JvvH0DslSVuaxkBUAwevnsaRREVZrn80xXlalkxWiazPPx/Hzv6Luvvmxjffrk8XdX11c3bkVRA3/x9aOzo1N5dvLk8z+vLTYvLQTTWdJPSmS4E/q9t9aL0wEPfR41VV14dXa053EWBlFWqka7g5XmkZelWTacMIaqwfFKK5TKZHbQuf3OL//+H9h/f/5g2B+8ZcmbbT+0qaqUz+2mrY+LqlRk9uw5GOSkgZdV2gikisBzLVNBMUnnKkmzap41Ly+1u52DvV3HiLVea5ZVNuV0enEEL8Qnf8sOdw/GyXS1EyxSmlkML7RpmtmYdFstv9n2wwa2HO4HyysrjmMrKSilGBlZiZuADcIgQDJgUJ1s7eBkWBE0I15kcZ/lWAiRpqx/dLJ/eHD5em+tEzphxFtdZ8VxXV87MWCiAVFCRJUTzi3XCxstxij6ARNaa4wQAyYpzAanC2Ggsj7RitsOpZRJRefjvW++ZMdHR1VZPD0+XV3/4L33PrA6S6WUiahUWRltlJKMUjBKGTObJWdnW1JKIao4bvi+PxoMZAWa4QUXT+dzLCC0pGOmRBDlcKTVw3v3WCUEKLl05Q5ZuZnZsSpklmZKy2YrFqKSQqn6lxlE6P/84bMv7t4Lo0ZZiQ9/8eHt27cf3P8yq6QB/Mv3315aXWGe7blsApJJY+VpqcRYIYaUdlz33Z/9VRxFZZ7zMMQEa6FPT8+01mEQUEwoo/1+/+7dux+8//P1q9dG43Gv113stj/65GPGuTaGUaJVh62+ZQhnqtCnh0X/TGs5GM+YlFW7u8y4XQoRBgEAIIyH/f7woo8Ivb5xnfkeJfaTR0+LXHSXVu7d//Lbp99++umnuYST/sWbrqS1kQC2ZS/4QeCxph+fVMIqBWMWM8Z0Oh1ZSRb4lmUZY0Ab4NxbaHqccc4A2xjIdDJjzJon6f73+7PxGBtj2xahdDicZFlWVqXluosLzfZi3G4EVcG2Z6qjhLvQZY7jrF9dJxRjgozRhBJEYNWFCM/BmALiDIUUQW9paWt7GyHI5nOjQEgxn86m42Rra1dKWZUlsXjWia8HNMMq11yBVYrpeNxnhOB2u9HttdM8Qbih6vhFOD50Dx9LDMV7HWEFFPDW9q5UhlrEIKMQOxte2I1wMJxMplMjFTaApZxbMJpMh0mCojZ1bCbwYJ4zQqjvB3EcpUVitK57PK7xo8oxtVwkNDEYMORFLoSkjLcWO3miOcJpnqVFGkW+zblr2bmogtA/mysAjcUoLYolg6lE7NbtNcsCBYZiAkZxTBUg4cRu95qmXGMDyADGts0JRa7r/M2vPz66chL47tHx2eH+sY1AWU4CILJ54gRn5JzWZnTDt5gVRL5iy10vsgxXFVZQSQkYK6Vm/qXReptjAOpbhFMKURQuLnZarWYcRFpoY+THGx9sXG7TfOS4C8prCSQY453Qa+HCouhEeU+++GNBCPMaThx7YeiOpqzSIAohpcSYK8zKmkExyaeM8tbCQhRFvV7Pd3m7Ew9Hw/Ura+/fuZG/ek7j+JyHr/YPtVSGWUlRIlEU2XyptyhdYOH11cqyJ+fDyXw+Gx74luP5PndtZluEMEpITRgI27Z1cTG4e/fBlbUus3zPc2YvH/37/RdHqUin0/EsTfLMaAWIRHHcDNxrLrz7d++zlsWAcw1UKHh9evZ///UZB8w4I47lR2EjbrRarV6v6/n+00eP57M0sO0kdnV6vLC8ak8mo93NMW1rWTmUBQttyhkhBBPCkGFYCVUx4IxjTaluNcOyKOKFlkyLdJ7iSuzt7LmuyzmnBFOG5/NUGzzo93vur66G1nw6qqBOy0IUc8+YH/oV/DAc1FOKLNbigazQtGQE8v74e1zZjcBpNJtzzADz0Pen0wQhojWkaUYQ1GFROp3nv//DwwZBEMdrveZE0lk2kdoIqTWAlCUyhhN86+b1tbevDcVUIWA3gktIg9eIy7Pc+cmdza0d3cQ2Z2hnSylVowITignCNI5alu2ORrMBFmQwtY38zW/+8V9/+7uT03ODiON7Gzeue66zvbk5mozG40XuIiYRuRF119xmUAkmJpe6DUBo/dqVjY11ghBogwGRGnvUsmzGyPrV1Xfe/Qll1GW4yqoXm6+yPEcIwEgCMrAp1M0fvvnq2YP/fPiz5Z9+vP5zVig1L4rJdIIoevni2/2dbc6sRhxpVRMWqWH9ZrhDYejnebq+fuX8rPX65Gx7lrx4tUsohdoKl5l49PCJ1jJuRL/65MN33r3TXbtMGWLzCiclFIa7btQJyp9eWz47P9j5LtFaI4SkFACIMMsgFATBwcF+UeZRozEaDL3Y6fa6SZK8ft0vyhozGFFt5MrK0j//yz85rq20VBViBmFMGaHMc71Ly0utVnNtPL64GE2v9IqiEEJkWV5IkAYj0Ddv3Z4k89PzvtDqk49+sba6PBmP8rx69Ojrw4MTQNp2rTt3bmpRJEVWX4oJszAoioljBSzAxlHK77UjfXVZVIVWWkhRFGWeFdNp+u3eRZq6ojLJdIYNfPP4yebT557v+oHvcGYxwGA21i4vNvzzw13P8z3HQYQxFxWcK8QJMk7N8UopSZVm0qFv5mcllaxknma+5z3dOZFV3vVtBBqymUBIz3HBsWWTd651Iz/oLi4wWXDluthyCLM5YRQjZvOa9wwohBghwLnSSkqG6/IaZINxdBwG7cWFO7euzJO0rITWug5GaowxY4RSYlkW5dxxbNu2Pc93PN+qcWj9BdrD8Sob4MXzAAAAAElFTkSuQmCC';
+const $=id=>document.getElementById(id);
+const pct=x=>(100*x).toFixed(2);
+const m=report.methods,primary=report.primary_comparison;
+$('hero-gain').innerHTML='+'+pct(primary.mean_difference)+'<span>个百分点</span>';
+$('hero-accuracy').textContent=pct(m.baseline_selected.mean_accuracy)+'% → '+pct(m.feature_max.mean_accuracy)+'%';
+$('f1-result').textContent=pct(m.baseline_selected.mean_macro_f1)+'% → '+pct(m.feature_max.mean_macro_f1)+'%';
+$('interval-result').textContent='+'+pct(primary.paired_image_and_seed_bootstrap_95_interval[0])+' ～ +'+pct(primary.paired_image_and_seed_bootstrap_95_interval[1]);
+const resultMethods=[['baseline_mean','固定概率平均'],['baseline_selected','开发集择优简单融合'],['feature_max','特征最大聚合']];
+$('result-rows').innerHTML=resultMethods.map(([key,label])=>'<tr class="'+(key==='feature_max'?'method':'')+'"><th scope="row">'+label+'</th>'+m[key].accuracy_by_seed.map(v=>'<td>'+pct(v)+'</td>').join('')+'<td>'+pct(m[key].mean_accuracy)+' ± '+pct(m[key].sd_accuracy)+'</td></tr>').join('');
+$('gain-row').innerHTML='<th scope="row">相对择优对照（百分点）</th>'+primary.difference_by_seed.map(v=>'<td>+'+pct(v)+'</td>').join('')+'<td>+'+pct(primary.mean_difference)+'</td>';
+
+let mode='module';
+const green='#08776a',ink='#19312f',muted='#586a68',line='#91a59a';
+function txt(x,y,text,size=17,fill=ink,anchor='middle',weight=400){return '<text x="'+x+'" y="'+y+'" font-size="'+size+'" fill="'+fill+'" text-anchor="'+anchor+'" font-weight="'+weight+'">'+text+'</text>';}
+function rect(x,y,w,h,fill='#f0f4ef',stroke='#d0dcd2',rx=9){return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="'+rx+'" fill="'+fill+'" stroke="'+stroke+'"/>';}
+function arrow(x1,y1,x2,y2,color=line){return '<path d="M '+x1+' '+y1+' L '+x2+' '+y2+'" fill="none" stroke="'+color+'" stroke-width="1.6" marker-end="url(#arrow)"/>';}
+function path(d,color=line){return '<path d="'+d+'" fill="none" stroke="'+color+'" stroke-width="1.6"/>';}
+function photo(x,y,s,r=0){return '<image href="'+sample+'" x="'+x+'" y="'+y+'" width="'+s+'" height="'+s+'" transform="rotate('+(-90*r)+' '+(x+s/2)+' '+(y+s/2)+')" style="image-rendering:pixelated"/>';}
+function vector(x,y,w=65,h=32){return Array.from({length:6},(_,j)=>'<rect x="'+(x+j*w/6)+'" y="'+y+'" width="'+(w/6-2)+'" height="'+h+'" rx="2" fill="'+['#d6e8dc','#aacfc0','#78b9a2','#c1ddce','#88c1ac','#b6d7c6'][j]+'"/>').join('');}
+function tensor(x,y,w,h,layers,color){return Array.from({length:layers},(_,i)=>'<rect x="'+(x+i*5)+'" y="'+(y-i*4)+'" width="'+w+'" height="'+h+'" fill="'+color+'" stroke="#668d7c" stroke-width="1"/>').join('');}
+function svgStart(w,h){return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 '+w+' '+h+'" role="img" aria-labelledby="network-svg-title network-svg-desc" style="font-family:PingFang SC,Microsoft YaHei,system-ui,sans-serif"><title id="network-svg-title">'+(mode==='module'?'四方向共享特征最大聚合网络':'四方向预测概率平均对照网络')+'</title><desc id="network-svg-desc">同一原图生成四个旋转视图，每个视图经过共享卷积编码器得到1600维特征。'+(mode==='module'?'在方向维逐维取最大值后，通过分类头输出10类概率。':'每个特征分别通过共享分类头，再平均四个10维概率向量。')+'</desc><defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="'+line+'"/></marker></defs>';}
+function desktopDiagram(){
+ let s=svgStart(1160,480);
+ s+=txt(61,65,'原图 x',17)+photo(27,211,68)+txt(61,310,'3 × 32 × 32',13,muted);
+ s+=path('M 102 245 H 130 M 130 119 V 371');
+ s+=txt(184,65,'四方向视图',17)+txt(440,65,'共享卷积编码器 fθ',17)+txt(627,65,'每方向特征',17);
+ s+=rect(269,86,291,318,'#f3f7f1','#c8d8cb',12)+txt(414,462,'同一组参数 · 四次编码',13,muted);
+ const ys=[133,217,301,385];
+ ys.forEach((y,r)=>{
+   const yy=y-16;s+=arrow(130,yy,151,yy)+photo(158,y-44,54,r)+txt(228,y-12,r*90+'°',13,muted);
+   s+=arrow(247,yy,282,yy)+tensor(296,y-38,35,44,3,'#d1e3c9')+arrow(350,yy,383,yy)+tensor(399,y-29,26,29,4,'#a6cbb7')+arrow(447,yy,475,yy)+vector(485,y-30,51,26);
+   s+=arrow(562,yy,589,yy)+vector(595,y-32,64,32)+txt(626,y+19,'h'+r+' · 1600',12,muted);
+ });
+ s+=txt(322,433,'Conv + Pool',13,muted)+txt(424,433,'Conv + Pool',13,muted)+txt(510,433,'Flatten',13,muted);
+ if(mode==='module'){
+  s+=txt(763,65,'方向聚合',17,green)+txt(937,65,'分类头',17)+txt(1090,65,'类别概率',17);
+  s+=rect(712,95,104,298,'#e6f4eb','#a2cbb6',12);
+  ys.forEach(y=>{s+=arrow(668,y-16,708,y-16,green)});
+  s+=txt(764,227,'逐维 MAX',17,green,'middle',650)+txt(764,255,'沿方向维',13,green)+txt(764,280,'4 × 1600',13,green)+txt(764,300,'↓',17,green)+txt(764,320,'1600',14,green);
+  s+=arrow(819,245,853,245)+rect(858,201,151,88,'#f0f4ef','#c4d6ca')+txt(933,230,'gφ(z)',19)+txt(933,253,'1600 → 120 → 84',12,muted)+txt(933,275,'→ 10',13,muted)+arrow(1013,245,1044,245)+txt(1032,190,'Softmax',12,muted);
+  s+=rect(1050,215,81,60,'#fff','#b6ccbf')+txt(1090,241,'pᵐ(x)',19,green)+txt(1090,261,'10 类',12,muted);
+  s+=txt(971,357,'聚合后的预测接受类别监督',13,green);
+ }else{
+  s+=txt(770,65,'共享分类头 gφ',17)+txt(936,65,'每方向概率',17)+txt(936,84,'Softmax 后',12,muted)+txt(1087,65,'概率平均',17);
+  ys.forEach((y,r)=>{s+=arrow(668,y-16,700,y-16)+rect(705,y-39,131,47)+txt(770,y-11,'1600 → … → 10',13)+arrow(840,y-16,884,y-16)+rect(892,y-35,76,39,'#fff','#ccd6cf',5)+txt(930,y-10,'p'+r+' · 10',13)+path('M 970 '+(y-16)+' H 1000');});
+  s+=path('M 1000 117 V 369')+arrow(1000,245,1032,245)+rect(1037,204,104,83,'#edf1ef','#bfcfc5')+txt(1089,238,'MEAN',16)+txt(1089,263,'10 类概率',12,muted);
+  s+=txt(885,433,'训练：四个视图分别接受类别监督',13,muted);
+ }
+ return s+'</svg>';
+}
+function mobileDiagram(w){
+ const cx=w/2, xs=Array.from({length:4},(_,r)=>28+(w-56)*(r+.5)/4),branchW=(w-64)/4;
+ let s=svgStart(w,775);
+ s+=photo(cx-26,23,52)+txt(cx,95,'原图 x · 3 × 32 × 32',13,muted)+arrow(cx,104,cx,126);
+ s+=path('M '+xs[0]+' 130 H '+xs[3]);
+ xs.forEach((x,r)=>{s+=path('M '+x+' 130 V 140')+photo(x-22,144,44,r)+txt(x,210,r*90+'°',13)});
+ s+=arrow(cx,220,cx,245)+rect(24,252,w-48,100,'#f0f5ed','#b9cebd',10)+txt(cx,278,'共享卷积编码器 fθ',17);
+ s+=tensor(cx-103,302,20,24,3,'#d1e3c9')+arrow(cx-61,313,cx-26,313)+tensor(cx-17,305,16,18,3,'#a6cbb7')+arrow(cx+17,313,cx+45,313)+vector(cx+56,303,45,20);
+ s+=arrow(cx,357,cx,384)+txt(cx,405,'四个方向各得到一个 1600 维特征',13,muted);
+ xs.forEach((x,r)=>{s+=vector(x-branchW/2,419,branchW,27)+txt(x,466,'h'+r,13)});
+ s+=arrow(cx,475,cx,500);
+ if(mode==='module'){
+  s+=rect(24,510,w-48,65,'#e6f4eb','#a2cbb6')+txt(cx,537,'逐维 MAX · 沿方向维聚合',16,green,'middle',600)+txt(cx,560,'4 × 1600 → 1600',13,green)+arrow(cx,580,cx,601);
+  s+=rect(35,610,w-70,60)+txt(cx,635,'分类头 gφ',16)+txt(cx,657,'1600 → 120 → 84 → 10',13,muted)+arrow(cx,675,cx,697)+txt(cx,724,'Softmax → pᵐ(x)',17,green)+txt(cx,751,'聚合后的预测接受类别监督',12,muted);
+ }else{
+  s+=rect(24,510,w-48,65)+txt(cx,537,'共享分类头 gφ · 分别分类',16)+txt(cx,560,'经 Softmax 得到四个 10 维概率',13,muted)+arrow(cx,580,cx,601);
+  s+=rect(35,610,w-70,60,'#edf1ef','#bfcfc5')+txt(cx,635,'四方向类别概率取平均',16)+txt(cx,657,'4 × 10 → 10',13,muted)+arrow(cx,675,cx,697)+txt(cx,724,'平均预测 · 10 类概率',17)+txt(cx,751,'训练时四个视图分别接受监督',12,muted);
+ }
+ return s+'</svg>';
+}
+function drawNetwork(){const w=$('network').clientWidth-20;$('network').innerHTML=w>=900?desktopDiagram():mobileDiagram(Math.max(260,w));}
+function setMode(next){mode=next;const isModule=mode==='module';$('show-module').setAttribute('aria-pressed',String(isModule));$('show-baseline').setAttribute('aria-pressed',String(!isModule));$('diagram-title').textContent=isModule?'四方向特征最大聚合':'四方向预测概率平均';$('diagram-subtitle').textContent=isModule?'4 × 1600 → 1600 → 10':'4 × 1600 → 4 × 10 → 10';$('diagram-caption').innerHTML=isModule?'<b>接入位置：</b>编码器与分类头之间。把四个特征向量沿方向维逐维取最大值，形成一个 1600 维向量；分类损失通过聚合模块反向传播。':'<b>对照流程：</b>四个方向先分别完成分类，再平均类别概率。分类头在训练时分别接收四个视图的监督，没有在分类之前联合聚合特征。';drawNetwork();}
+$('show-module').addEventListener('click',()=>setMode('module'));$('show-baseline').addEventListener('click',()=>setMode('baseline'));
+new ResizeObserver(drawNetwork).observe($('network'));setMode('module');
+
+const features=[[.2,1.6,.4,.8,.5,.3],[1.4,.3,.9,.4,.6,.2],[.5,.8,1.7,.2,.4,1.2],[.6,.5,.7,1.8,1.5,.9]];
+let rotation=0,selected=0;
+const maxima=Array.from({length:6},(_,j)=>Math.max(...features.map(row=>row[j])));
+function drawDemo(){
+ const rows=Array.from({length:4},(_,r)=>features[(r+rotation)%4]);
+ let s='<span class="row-label">方向</span>'+maxima.map((_,j)=>'<button type="button" class="column" data-dim="'+j+'" aria-label="选择第 '+(j+1)+' 个特征维度" aria-pressed="'+(selected===j)+'">j'+(j+1)+'</button>').join('');
+ rows.forEach((row,r)=>{s+='<span class="row-label">'+r*90+'°</span>'+row.map((v,j)=>'<span class="cell'+(v===maxima[j]?' winner':'')+(selected===j&&v===maxima[j]?' picked':'')+'" aria-label="方向 '+r*90+' 度，第 '+(j+1)+' 维，数值 '+v+(v===maxima[j]?'，本列最大值':'')+'">'+v.toFixed(1)+'</span>').join('');});
+ $('feature-matrix').innerHTML=s;
+ $('max-output').innerHTML='<span class="row-label">z</span>'+maxima.map((v,j)=>'<span class="cell'+(selected===j?' picked':'')+'">'+v.toFixed(1)+'</span>').join('');
+ const winner=rows.findIndex(row=>row[selected]===maxima[selected]);
+ $('selected-info').textContent='第 '+(selected+1)+' 维从 '+winner*90+'° 分支取值 '+maxima[selected].toFixed(1)+'。';
+ $('rotation-status').textContent='输入相对原图旋转 '+rotation*90+'° · z 保持不变';
+}
+$('feature-matrix').addEventListener('click',event=>{const b=event.target.closest('[data-dim]');if(!b)return;selected=Number(b.dataset.dim);drawDemo();$('feature-matrix').querySelector('[data-dim="'+selected+'"]').focus({preventScroll:true});});
+$('rotate-demo').addEventListener('click',()=>{rotation=(rotation+1)%4;drawDemo();});drawDemo();
+</script>
+</body>
+</html>

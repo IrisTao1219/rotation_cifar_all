@@ -1,0 +1,8 @@
+# PyTorch 和 NumPy 按原实验记录固定。
+# CUDA 12.1 版本的 PyTorch 安装方式见复现指南。
+torch==2.5.1
+numpy==1.26.4
+# 仅重新准备数据、绘图时需要以下包；原记录未固定其版本。
+pillow
+pyarrow
+matplotlib

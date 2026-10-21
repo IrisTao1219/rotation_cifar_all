@@ -1,0 +1,913 @@
+{
+  "assembled_on": "2026-10-20",
+  "source_snapshots": {
+    "rotation_cifar": {
+      "file_count": 150,
+      "all_sha256_equal_to_source": true
+    },
+    "官方测试_2026-10-11": {
+      "file_count": 30,
+      "all_sha256_equal_to_source": true
+    }
+  },
+  "original_source_files_retained": 196,
+  "source_coverage": [
+    {
+      "source_path": "rotation_cifar/README.md",
+      "retained_as": "rotation_cifar/README.md"
+    },
+    {
+      "source_path": "rotation_cifar/aggregate.py",
+      "retained_as": "rotation_cifar/aggregate.py"
+    },
+    {
+      "source_path": "rotation_cifar/baseline_diagnosis.json",
+      "retained_as": "rotation_cifar/baseline_diagnosis.json"
+    },
+    {
+      "source_path": "rotation_cifar/confirmation_lock.json",
+      "retained_as": "rotation_cifar/confirmation_lock.json"
+    },
+    {
+      "source_path": "rotation_cifar/data/confirm.npz",
+      "retained_as": "rotation_cifar/data/confirm.npz"
+    },
+    {
+      "source_path": "rotation_cifar/data/dev.npz",
+      "retained_as": "rotation_cifar/data/dev.npz"
+    },
+    {
+      "source_path": "rotation_cifar/data/train.npz",
+      "retained_as": "rotation_cifar/data/train.npz"
+    },
+    {
+      "source_path": "rotation_cifar/data/train.parquet",
+      "retained_as": "rotation_cifar/data/train.parquet"
+    },
+    {
+      "source_path": "rotation_cifar/environment.json",
+      "retained_as": "rotation_cifar/environment.json"
+    },
+    {
+      "source_path": "rotation_cifar/evaluate_fixed.py",
+      "retained_as": "rotation_cifar/evaluate_fixed.py"
+    },
+    {
+      "source_path": "rotation_cifar/experiment.py",
+      "retained_as": "rotation_cifar/experiment.py"
+    },
+    {
+      "source_path": "rotation_cifar/figures/confirmation_results.png",
+      "retained_as": "rotation_cifar/figures/confirmation_results.png"
+    },
+    {
+      "source_path": "rotation_cifar/figures/example_selection.json",
+      "retained_as": "rotation_cifar/figures/example_selection.json"
+    },
+    {
+      "source_path": "rotation_cifar/figures/per_class_results.png",
+      "retained_as": "rotation_cifar/figures/per_class_results.png"
+    },
+    {
+      "source_path": "rotation_cifar/figures/prediction_examples.png",
+      "retained_as": "rotation_cifar/figures/prediction_examples.png"
+    },
+    {
+      "source_path": "rotation_cifar/large_backbone_error_audit.json",
+      "retained_as": "rotation_cifar/large_backbone_error_audit.json"
+    },
+    {
+      "source_path": "rotation_cifar/make_figures.py",
+      "retained_as": "rotation_cifar/make_figures.py"
+    },
+    {
+      "source_path": "rotation_cifar/manifest.json",
+      "retained_as": "rotation_cifar/manifest.json"
+    },
+    {
+      "source_path": "rotation_cifar/prepare_hf.py",
+      "retained_as": "rotation_cifar/prepare_hf.py"
+    },
+    {
+      "source_path": "rotation_cifar/results/confirm_pool_max_large_vs_aug4_large.json",
+      "retained_as": "rotation_cifar/results/confirm_pool_max_large_vs_aug4_large.json"
+    },
+    {
+      "source_path": "rotation_cifar/results/dev_pool_max_large_vs_aug4_large.json",
+      "retained_as": "rotation_cifar/results/dev_pool_max_large_vs_aug4_large.json"
+    },
+    {
+      "source_path": "rotation_cifar/results/strong_control_confirmation.json",
+      "retained_as": "rotation_cifar/results/strong_control_confirmation.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_large_s1_e80/aggregation_selection.json",
+      "retained_as": "rotation_cifar/runs/aug4_large_s1_e80/aggregation_selection.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_large_s1_e80/best.pt",
+      "retained_as": "rotation_cifar/runs/aug4_large_s1_e80/best.pt"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_large_s1_e80/best_dev_predictions.npz",
+      "retained_as": "rotation_cifar/runs/aug4_large_s1_e80/best_dev_predictions.npz"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_large_s1_e80/complete.json",
+      "retained_as": "rotation_cifar/runs/aug4_large_s1_e80/complete.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_large_s1_e80/config.json",
+      "retained_as": "rotation_cifar/runs/aug4_large_s1_e80/config.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_large_s1_e80/fixed_confirm.json",
+      "retained_as": "rotation_cifar/runs/aug4_large_s1_e80/fixed_confirm.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_large_s1_e80/fixed_confirm_predictions.npz",
+      "retained_as": "rotation_cifar/runs/aug4_large_s1_e80/fixed_confirm_predictions.npz"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_large_s1_e80/fixed_dev.json",
+      "retained_as": "rotation_cifar/runs/aug4_large_s1_e80/fixed_dev.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_large_s1_e80/fixed_dev_predictions.npz",
+      "retained_as": "rotation_cifar/runs/aug4_large_s1_e80/fixed_dev_predictions.npz"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_large_s1_e80/progress.jsonl",
+      "retained_as": "rotation_cifar/runs/aug4_large_s1_e80/progress.jsonl"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_large_s1_e80/simple_aggregation_controls.json",
+      "retained_as": "rotation_cifar/runs/aug4_large_s1_e80/simple_aggregation_controls.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_large_s2_e80/aggregation_selection.json",
+      "retained_as": "rotation_cifar/runs/aug4_large_s2_e80/aggregation_selection.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_large_s2_e80/best.pt",
+      "retained_as": "rotation_cifar/runs/aug4_large_s2_e80/best.pt"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_large_s2_e80/best_dev_predictions.npz",
+      "retained_as": "rotation_cifar/runs/aug4_large_s2_e80/best_dev_predictions.npz"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_large_s2_e80/complete.json",
+      "retained_as": "rotation_cifar/runs/aug4_large_s2_e80/complete.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_large_s2_e80/config.json",
+      "retained_as": "rotation_cifar/runs/aug4_large_s2_e80/config.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_large_s2_e80/fixed_confirm.json",
+      "retained_as": "rotation_cifar/runs/aug4_large_s2_e80/fixed_confirm.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_large_s2_e80/fixed_confirm_predictions.npz",
+      "retained_as": "rotation_cifar/runs/aug4_large_s2_e80/fixed_confirm_predictions.npz"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_large_s2_e80/fixed_dev.json",
+      "retained_as": "rotation_cifar/runs/aug4_large_s2_e80/fixed_dev.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_large_s2_e80/fixed_dev_predictions.npz",
+      "retained_as": "rotation_cifar/runs/aug4_large_s2_e80/fixed_dev_predictions.npz"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_large_s2_e80/progress.jsonl",
+      "retained_as": "rotation_cifar/runs/aug4_large_s2_e80/progress.jsonl"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_large_s3_e80/aggregation_selection.json",
+      "retained_as": "rotation_cifar/runs/aug4_large_s3_e80/aggregation_selection.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_large_s3_e80/best.pt",
+      "retained_as": "rotation_cifar/runs/aug4_large_s3_e80/best.pt"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_large_s3_e80/best_dev_predictions.npz",
+      "retained_as": "rotation_cifar/runs/aug4_large_s3_e80/best_dev_predictions.npz"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_large_s3_e80/complete.json",
+      "retained_as": "rotation_cifar/runs/aug4_large_s3_e80/complete.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_large_s3_e80/config.json",
+      "retained_as": "rotation_cifar/runs/aug4_large_s3_e80/config.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_large_s3_e80/fixed_confirm.json",
+      "retained_as": "rotation_cifar/runs/aug4_large_s3_e80/fixed_confirm.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_large_s3_e80/fixed_confirm_predictions.npz",
+      "retained_as": "rotation_cifar/runs/aug4_large_s3_e80/fixed_confirm_predictions.npz"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_large_s3_e80/fixed_dev.json",
+      "retained_as": "rotation_cifar/runs/aug4_large_s3_e80/fixed_dev.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_large_s3_e80/fixed_dev_predictions.npz",
+      "retained_as": "rotation_cifar/runs/aug4_large_s3_e80/fixed_dev_predictions.npz"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_large_s3_e80/progress.jsonl",
+      "retained_as": "rotation_cifar/runs/aug4_large_s3_e80/progress.jsonl"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_s1_e40/best.pt",
+      "retained_as": "rotation_cifar/runs/aug4_s1_e40/best.pt"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_s1_e40/best_dev_predictions.npz",
+      "retained_as": "rotation_cifar/runs/aug4_s1_e40/best_dev_predictions.npz"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_s1_e40/complete.json",
+      "retained_as": "rotation_cifar/runs/aug4_s1_e40/complete.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_s1_e40/config.json",
+      "retained_as": "rotation_cifar/runs/aug4_s1_e40/config.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_s1_e40/progress.jsonl",
+      "retained_as": "rotation_cifar/runs/aug4_s1_e40/progress.jsonl"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_s1_e80/best.pt",
+      "retained_as": "rotation_cifar/runs/aug4_s1_e80/best.pt"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_s1_e80/best_dev_predictions.npz",
+      "retained_as": "rotation_cifar/runs/aug4_s1_e80/best_dev_predictions.npz"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_s1_e80/complete.json",
+      "retained_as": "rotation_cifar/runs/aug4_s1_e80/complete.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_s1_e80/config.json",
+      "retained_as": "rotation_cifar/runs/aug4_s1_e80/config.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_s1_e80/progress.jsonl",
+      "retained_as": "rotation_cifar/runs/aug4_s1_e80/progress.jsonl"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_wide_s1_e40/best.pt",
+      "retained_as": "rotation_cifar/runs/aug4_wide_s1_e40/best.pt"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_wide_s1_e40/best_dev_predictions.npz",
+      "retained_as": "rotation_cifar/runs/aug4_wide_s1_e40/best_dev_predictions.npz"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_wide_s1_e40/complete.json",
+      "retained_as": "rotation_cifar/runs/aug4_wide_s1_e40/complete.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_wide_s1_e40/config.json",
+      "retained_as": "rotation_cifar/runs/aug4_wide_s1_e40/config.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_wide_s1_e40/progress.jsonl",
+      "retained_as": "rotation_cifar/runs/aug4_wide_s1_e40/progress.jsonl"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_wide_s1_e80/best.pt",
+      "retained_as": "rotation_cifar/runs/aug4_wide_s1_e80/best.pt"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_wide_s1_e80/best_dev_predictions.npz",
+      "retained_as": "rotation_cifar/runs/aug4_wide_s1_e80/best_dev_predictions.npz"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_wide_s1_e80/complete.json",
+      "retained_as": "rotation_cifar/runs/aug4_wide_s1_e80/complete.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_wide_s1_e80/config.json",
+      "retained_as": "rotation_cifar/runs/aug4_wide_s1_e80/config.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug4_wide_s1_e80/progress.jsonl",
+      "retained_as": "rotation_cifar/runs/aug4_wide_s1_e80/progress.jsonl"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug_s1_e40/best.pt",
+      "retained_as": "rotation_cifar/runs/aug_s1_e40/best.pt"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug_s1_e40/best_dev_predictions.npz",
+      "retained_as": "rotation_cifar/runs/aug_s1_e40/best_dev_predictions.npz"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug_s1_e40/complete.json",
+      "retained_as": "rotation_cifar/runs/aug_s1_e40/complete.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug_s1_e40/config.json",
+      "retained_as": "rotation_cifar/runs/aug_s1_e40/config.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/aug_s1_e40/progress.jsonl",
+      "retained_as": "rotation_cifar/runs/aug_s1_e40/progress.jsonl"
+    },
+    {
+      "source_path": "rotation_cifar/runs/canon_aux_tta_s1_e40/best.pt",
+      "retained_as": "rotation_cifar/runs/canon_aux_tta_s1_e40/best.pt"
+    },
+    {
+      "source_path": "rotation_cifar/runs/canon_aux_tta_s1_e40/best_dev_predictions.npz",
+      "retained_as": "rotation_cifar/runs/canon_aux_tta_s1_e40/best_dev_predictions.npz"
+    },
+    {
+      "source_path": "rotation_cifar/runs/canon_aux_tta_s1_e40/complete.json",
+      "retained_as": "rotation_cifar/runs/canon_aux_tta_s1_e40/complete.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/canon_aux_tta_s1_e40/config.json",
+      "retained_as": "rotation_cifar/runs/canon_aux_tta_s1_e40/config.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/canon_aux_tta_s1_e40/progress.jsonl",
+      "retained_as": "rotation_cifar/runs/canon_aux_tta_s1_e40/progress.jsonl"
+    },
+    {
+      "source_path": "rotation_cifar/runs/canon_hard_s1_e40/best.pt",
+      "retained_as": "rotation_cifar/runs/canon_hard_s1_e40/best.pt"
+    },
+    {
+      "source_path": "rotation_cifar/runs/canon_hard_s1_e40/best_dev_predictions.npz",
+      "retained_as": "rotation_cifar/runs/canon_hard_s1_e40/best_dev_predictions.npz"
+    },
+    {
+      "source_path": "rotation_cifar/runs/canon_hard_s1_e40/complete.json",
+      "retained_as": "rotation_cifar/runs/canon_hard_s1_e40/complete.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/canon_hard_s1_e40/config.json",
+      "retained_as": "rotation_cifar/runs/canon_hard_s1_e40/config.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/canon_hard_s1_e40/progress.jsonl",
+      "retained_as": "rotation_cifar/runs/canon_hard_s1_e40/progress.jsonl"
+    },
+    {
+      "source_path": "rotation_cifar/runs/canon_soft_s1_e40/best.pt",
+      "retained_as": "rotation_cifar/runs/canon_soft_s1_e40/best.pt"
+    },
+    {
+      "source_path": "rotation_cifar/runs/canon_soft_s1_e40/best_dev_predictions.npz",
+      "retained_as": "rotation_cifar/runs/canon_soft_s1_e40/best_dev_predictions.npz"
+    },
+    {
+      "source_path": "rotation_cifar/runs/canon_soft_s1_e40/complete.json",
+      "retained_as": "rotation_cifar/runs/canon_soft_s1_e40/complete.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/canon_soft_s1_e40/config.json",
+      "retained_as": "rotation_cifar/runs/canon_soft_s1_e40/config.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/canon_soft_s1_e40/progress.jsonl",
+      "retained_as": "rotation_cifar/runs/canon_soft_s1_e40/progress.jsonl"
+    },
+    {
+      "source_path": "rotation_cifar/runs/plain_s1_e40/best.pt",
+      "retained_as": "rotation_cifar/runs/plain_s1_e40/best.pt"
+    },
+    {
+      "source_path": "rotation_cifar/runs/plain_s1_e40/best_dev_predictions.npz",
+      "retained_as": "rotation_cifar/runs/plain_s1_e40/best_dev_predictions.npz"
+    },
+    {
+      "source_path": "rotation_cifar/runs/plain_s1_e40/complete.json",
+      "retained_as": "rotation_cifar/runs/plain_s1_e40/complete.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/plain_s1_e40/config.json",
+      "retained_as": "rotation_cifar/runs/plain_s1_e40/config.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/plain_s1_e40/progress.jsonl",
+      "retained_as": "rotation_cifar/runs/plain_s1_e40/progress.jsonl"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_large_s1_e80/best.pt",
+      "retained_as": "rotation_cifar/runs/pool_max_large_s1_e80/best.pt"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_large_s1_e80/best_dev_predictions.npz",
+      "retained_as": "rotation_cifar/runs/pool_max_large_s1_e80/best_dev_predictions.npz"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_large_s1_e80/complete.json",
+      "retained_as": "rotation_cifar/runs/pool_max_large_s1_e80/complete.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_large_s1_e80/config.json",
+      "retained_as": "rotation_cifar/runs/pool_max_large_s1_e80/config.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_large_s1_e80/fixed_confirm.json",
+      "retained_as": "rotation_cifar/runs/pool_max_large_s1_e80/fixed_confirm.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_large_s1_e80/fixed_confirm_predictions.npz",
+      "retained_as": "rotation_cifar/runs/pool_max_large_s1_e80/fixed_confirm_predictions.npz"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_large_s1_e80/fixed_dev.json",
+      "retained_as": "rotation_cifar/runs/pool_max_large_s1_e80/fixed_dev.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_large_s1_e80/fixed_dev_predictions.npz",
+      "retained_as": "rotation_cifar/runs/pool_max_large_s1_e80/fixed_dev_predictions.npz"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_large_s1_e80/progress.jsonl",
+      "retained_as": "rotation_cifar/runs/pool_max_large_s1_e80/progress.jsonl"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_large_s2_e80/best.pt",
+      "retained_as": "rotation_cifar/runs/pool_max_large_s2_e80/best.pt"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_large_s2_e80/best_dev_predictions.npz",
+      "retained_as": "rotation_cifar/runs/pool_max_large_s2_e80/best_dev_predictions.npz"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_large_s2_e80/complete.json",
+      "retained_as": "rotation_cifar/runs/pool_max_large_s2_e80/complete.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_large_s2_e80/config.json",
+      "retained_as": "rotation_cifar/runs/pool_max_large_s2_e80/config.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_large_s2_e80/fixed_confirm.json",
+      "retained_as": "rotation_cifar/runs/pool_max_large_s2_e80/fixed_confirm.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_large_s2_e80/fixed_confirm_predictions.npz",
+      "retained_as": "rotation_cifar/runs/pool_max_large_s2_e80/fixed_confirm_predictions.npz"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_large_s2_e80/fixed_dev.json",
+      "retained_as": "rotation_cifar/runs/pool_max_large_s2_e80/fixed_dev.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_large_s2_e80/fixed_dev_predictions.npz",
+      "retained_as": "rotation_cifar/runs/pool_max_large_s2_e80/fixed_dev_predictions.npz"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_large_s2_e80/progress.jsonl",
+      "retained_as": "rotation_cifar/runs/pool_max_large_s2_e80/progress.jsonl"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_large_s3_e80/best.pt",
+      "retained_as": "rotation_cifar/runs/pool_max_large_s3_e80/best.pt"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_large_s3_e80/best_dev_predictions.npz",
+      "retained_as": "rotation_cifar/runs/pool_max_large_s3_e80/best_dev_predictions.npz"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_large_s3_e80/complete.json",
+      "retained_as": "rotation_cifar/runs/pool_max_large_s3_e80/complete.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_large_s3_e80/config.json",
+      "retained_as": "rotation_cifar/runs/pool_max_large_s3_e80/config.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_large_s3_e80/fixed_confirm.json",
+      "retained_as": "rotation_cifar/runs/pool_max_large_s3_e80/fixed_confirm.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_large_s3_e80/fixed_confirm_predictions.npz",
+      "retained_as": "rotation_cifar/runs/pool_max_large_s3_e80/fixed_confirm_predictions.npz"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_large_s3_e80/fixed_dev.json",
+      "retained_as": "rotation_cifar/runs/pool_max_large_s3_e80/fixed_dev.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_large_s3_e80/fixed_dev_predictions.npz",
+      "retained_as": "rotation_cifar/runs/pool_max_large_s3_e80/fixed_dev_predictions.npz"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_large_s3_e80/progress.jsonl",
+      "retained_as": "rotation_cifar/runs/pool_max_large_s3_e80/progress.jsonl"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_s1_e40/best.pt",
+      "retained_as": "rotation_cifar/runs/pool_max_s1_e40/best.pt"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_s1_e40/best_dev_predictions.npz",
+      "retained_as": "rotation_cifar/runs/pool_max_s1_e40/best_dev_predictions.npz"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_s1_e40/complete.json",
+      "retained_as": "rotation_cifar/runs/pool_max_s1_e40/complete.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_s1_e40/config.json",
+      "retained_as": "rotation_cifar/runs/pool_max_s1_e40/config.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_s1_e40/progress.jsonl",
+      "retained_as": "rotation_cifar/runs/pool_max_s1_e40/progress.jsonl"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_s1_e80/best.pt",
+      "retained_as": "rotation_cifar/runs/pool_max_s1_e80/best.pt"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_s1_e80/best_dev_predictions.npz",
+      "retained_as": "rotation_cifar/runs/pool_max_s1_e80/best_dev_predictions.npz"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_s1_e80/complete.json",
+      "retained_as": "rotation_cifar/runs/pool_max_s1_e80/complete.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_s1_e80/config.json",
+      "retained_as": "rotation_cifar/runs/pool_max_s1_e80/config.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_max_s1_e80/progress.jsonl",
+      "retained_as": "rotation_cifar/runs/pool_max_s1_e80/progress.jsonl"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_mean_large_s1_e80/best.pt",
+      "retained_as": "rotation_cifar/runs/pool_mean_large_s1_e80/best.pt"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_mean_large_s1_e80/best_dev_predictions.npz",
+      "retained_as": "rotation_cifar/runs/pool_mean_large_s1_e80/best_dev_predictions.npz"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_mean_large_s1_e80/complete.json",
+      "retained_as": "rotation_cifar/runs/pool_mean_large_s1_e80/complete.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_mean_large_s1_e80/config.json",
+      "retained_as": "rotation_cifar/runs/pool_mean_large_s1_e80/config.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_mean_large_s1_e80/progress.jsonl",
+      "retained_as": "rotation_cifar/runs/pool_mean_large_s1_e80/progress.jsonl"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_mean_s1_e80/best.pt",
+      "retained_as": "rotation_cifar/runs/pool_mean_s1_e80/best.pt"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_mean_s1_e80/best_dev_predictions.npz",
+      "retained_as": "rotation_cifar/runs/pool_mean_s1_e80/best_dev_predictions.npz"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_mean_s1_e80/complete.json",
+      "retained_as": "rotation_cifar/runs/pool_mean_s1_e80/complete.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_mean_s1_e80/config.json",
+      "retained_as": "rotation_cifar/runs/pool_mean_s1_e80/config.json"
+    },
+    {
+      "source_path": "rotation_cifar/runs/pool_mean_s1_e80/progress.jsonl",
+      "retained_as": "rotation_cifar/runs/pool_mean_s1_e80/progress.jsonl"
+    },
+    {
+      "source_path": "rotation_cifar/source_snapshot.json",
+      "retained_as": "rotation_cifar/source_snapshot.json"
+    },
+    {
+      "source_path": "rotation_cifar/strong_control_check.py",
+      "retained_as": "rotation_cifar/strong_control_check.py"
+    },
+    {
+      "source_path": "rotation_cifar/筛选协议.md",
+      "retained_as": "rotation_cifar/筛选协议.md"
+    },
+    {
+      "source_path": "rotation_cifar/聚合模块验证协议.md",
+      "retained_as": "rotation_cifar/聚合模块验证协议.md"
+    },
+    {
+      "source_path": "rotation_cifar/选题建议与实验报告.md",
+      "retained_as": "rotation_cifar/选题建议与实验报告.md"
+    },
+    {
+      "source_path": "官方测试_2026-10-11/README.md",
+      "retained_as": "官方测试_2026-10-11/README.md"
+    },
+    {
+      "source_path": "官方测试_2026-10-11/data/official_test.npz",
+      "retained_as": "官方测试_2026-10-11/data/official_test.npz"
+    },
+    {
+      "source_path": "官方测试_2026-10-11/data/test.parquet",
+      "retained_as": "官方测试_2026-10-11/data/test.parquet"
+    },
+    {
+      "source_path": "官方测试_2026-10-11/data_manifest.json",
+      "retained_as": "官方测试_2026-10-11/data_manifest.json"
+    },
+    {
+      "source_path": "官方测试_2026-10-11/evaluate_official_test.py",
+      "retained_as": "官方测试_2026-10-11/evaluate_official_test.py"
+    },
+    {
+      "source_path": "官方测试_2026-10-11/evaluation_code_lock.json",
+      "retained_as": "官方测试_2026-10-11/evaluation_code_lock.json"
+    },
+    {
+      "source_path": "官方测试_2026-10-11/evaluation_lock.json",
+      "retained_as": "官方测试_2026-10-11/evaluation_lock.json"
+    },
+    {
+      "source_path": "官方测试_2026-10-11/predictions/aug4_large_s1_e80.json",
+      "retained_as": "官方测试_2026-10-11/predictions/aug4_large_s1_e80.json"
+    },
+    {
+      "source_path": "官方测试_2026-10-11/predictions/aug4_large_s1_e80.npz",
+      "retained_as": "官方测试_2026-10-11/predictions/aug4_large_s1_e80.npz"
+    },
+    {
+      "source_path": "官方测试_2026-10-11/predictions/aug4_large_s2_e80.json",
+      "retained_as": "官方测试_2026-10-11/predictions/aug4_large_s2_e80.json"
+    },
+    {
+      "source_path": "官方测试_2026-10-11/predictions/aug4_large_s2_e80.npz",
+      "retained_as": "官方测试_2026-10-11/predictions/aug4_large_s2_e80.npz"
+    },
+    {
+      "source_path": "官方测试_2026-10-11/predictions/aug4_large_s3_e80.json",
+      "retained_as": "官方测试_2026-10-11/predictions/aug4_large_s3_e80.json"
+    },
+    {
+      "source_path": "官方测试_2026-10-11/predictions/aug4_large_s3_e80.npz",
+      "retained_as": "官方测试_2026-10-11/predictions/aug4_large_s3_e80.npz"
+    },
+    {
+      "source_path": "官方测试_2026-10-11/predictions/pool_max_large_s1_e80.json",
+      "retained_as": "官方测试_2026-10-11/predictions/pool_max_large_s1_e80.json"
+    },
+    {
+      "source_path": "官方测试_2026-10-11/predictions/pool_max_large_s1_e80.npz",
+      "retained_as": "官方测试_2026-10-11/predictions/pool_max_large_s1_e80.npz"
+    },
+    {
+      "source_path": "官方测试_2026-10-11/predictions/pool_max_large_s2_e80.json",
+      "retained_as": "官方测试_2026-10-11/predictions/pool_max_large_s2_e80.json"
+    },
+    {
+      "source_path": "官方测试_2026-10-11/predictions/pool_max_large_s2_e80.npz",
+      "retained_as": "官方测试_2026-10-11/predictions/pool_max_large_s2_e80.npz"
+    },
+    {
+      "source_path": "官方测试_2026-10-11/predictions/pool_max_large_s3_e80.json",
+      "retained_as": "官方测试_2026-10-11/predictions/pool_max_large_s3_e80.json"
+    },
+    {
+      "source_path": "官方测试_2026-10-11/predictions/pool_max_large_s3_e80.npz",
+      "retained_as": "官方测试_2026-10-11/predictions/pool_max_large_s3_e80.npz"
+    },
+    {
+      "source_path": "官方测试_2026-10-11/prepare_official_test.py",
+      "retained_as": "官方测试_2026-10-11/prepare_official_test.py"
+    },
+    {
+      "source_path": "官方测试_2026-10-11/results.json",
+      "retained_as": "官方测试_2026-10-11/results.json"
+    },
+    {
+      "source_path": "官方测试_2026-10-11/官方测试结果报告.md",
+      "retained_as": "官方测试_2026-10-11/官方测试结果报告.md"
+    },
+    {
+      "source_path": "官方测试_2026-10-11/服务器结果SHA256.json",
+      "retained_as": "官方测试_2026-10-11/服务器结果SHA256.json"
+    },
+    {
+      "source_path": "官方测试_2026-10-11/来源记录/官网下载尝试_evaluation_code_lock.json",
+      "retained_as": "官方测试_2026-10-11/来源记录/官网下载尝试_evaluation_code_lock.json"
+    },
+    {
+      "source_path": "官方测试_2026-10-11/来源记录/官网下载尝试_评价协议.md",
+      "retained_as": "官方测试_2026-10-11/来源记录/官网下载尝试_评价协议.md"
+    },
+    {
+      "source_path": "官方测试_2026-10-11/来源记录/数据来源切换.json",
+      "retained_as": "官方测试_2026-10-11/来源记录/数据来源切换.json"
+    },
+    {
+      "source_path": "官方测试_2026-10-11/结果复核.json",
+      "retained_as": "官方测试_2026-10-11/结果复核.json"
+    },
+    {
+      "source_path": "官方测试_2026-10-11/补充材料SHA256.json",
+      "retained_as": "官方测试_2026-10-11/补充材料SHA256.json"
+    },
+    {
+      "source_path": "官方测试_2026-10-11/评价协议.md",
+      "retained_as": "官方测试_2026-10-11/评价协议.md"
+    },
+    {
+      "source_path": "官方测试_2026-10-11/运行日志.txt",
+      "retained_as": "官方测试_2026-10-11/运行日志.txt"
+    },
+    {
+      "source_path": "实验结果索引.md",
+      "retained_as": "实验结果索引.md"
+    },
+    {
+      "source_path": "实验结果说明.md",
+      "retained_as": "实验结果说明.md"
+    },
+    {
+      "source_path": "开题报告/课程设计开题报告.docx",
+      "retained_as": "开题报告/课程设计开题报告.docx"
+    },
+    {
+      "source_path": "开题报告/课程设计开题报告.md",
+      "retained_as": "历史报告/开题报告初稿_2026-10-11/课程设计开题报告.md"
+    },
+    {
+      "source_path": "开题报告/课程设计开题报告.pdf",
+      "retained_as": "历史报告/开题报告初稿_2026-10-11/课程设计开题报告.pdf"
+    },
+    {
+      "source_path": "归档记录/下载日志.txt",
+      "retained_as": "归档记录/下载日志.txt"
+    },
+    {
+      "source_path": "归档记录/下载校验结果.json",
+      "retained_as": "归档记录/下载校验结果.json"
+    },
+    {
+      "source_path": "归档记录/开题报告检查.json",
+      "retained_as": "归档记录/开题报告检查.json"
+    },
+    {
+      "source_path": "归档记录/数据与实验一致性检查.json",
+      "retained_as": "归档记录/数据与实验一致性检查.json"
+    },
+    {
+      "source_path": "归档记录/早期选题摘要/README.md",
+      "retained_as": "归档记录/早期选题摘要/README.md"
+    },
+    {
+      "source_path": "归档记录/早期选题摘要/候选与筛选协议.md",
+      "retained_as": "归档记录/早期选题摘要/候选与筛选协议.md"
+    },
+    {
+      "source_path": "归档记录/服务器文件清单.json",
+      "retained_as": "归档记录/服务器文件清单.json"
+    },
+    {
+      "source_path": "归档记录/本地补充文件清单.json",
+      "retained_as": "归档记录/本地补充文件清单.json"
+    },
+    {
+      "source_path": "归档记录/项目文件SHA256SUMS.txt",
+      "retained_as": "归档记录/项目文件SHA256SUMS.txt"
+    },
+    {
+      "source_path": "模块原理展示/index.html",
+      "retained_as": "模块原理展示/index.html"
+    },
+    {
+      "source_path": "项目结构说明.md",
+      "retained_as": "项目结构说明.md"
+    }
+  ],
+  "data": {
+    "train": {
+      "images": 40000,
+      "shape": [
+        40000,
+        3,
+        32,
+        32
+      ],
+      "dtype": "uint8",
+      "class_counts": [
+        4000,
+        4000,
+        4000,
+        4000,
+        4000,
+        4000,
+        4000,
+        4000,
+        4000,
+        4000
+      ],
+      "path": "rotation_cifar/data/train.npz"
+    },
+    "dev": {
+      "images": 5000,
+      "shape": [
+        5000,
+        3,
+        32,
+        32
+      ],
+      "dtype": "uint8",
+      "class_counts": [
+        500,
+        500,
+        500,
+        500,
+        500,
+        500,
+        500,
+        500,
+        500,
+        500
+      ],
+      "path": "rotation_cifar/data/dev.npz"
+    },
+    "confirm": {
+      "images": 5000,
+      "shape": [
+        5000,
+        3,
+        32,
+        32
+      ],
+      "dtype": "uint8",
+      "class_counts": [
+        500,
+        500,
+        500,
+        500,
+        500,
+        500,
+        500,
+        500,
+        500,
+        500
+      ],
+      "path": "rotation_cifar/data/confirm.npz"
+    },
+    "test": {
+      "images": 10000,
+      "shape": [
+        10000,
+        3,
+        32,
+        32
+      ],
+      "dtype": "uint8",
+      "class_counts": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000
+      ],
+      "path": "官方测试_2026-10-11/data/official_test.npz"
+    }
+  },
+  "train_dev_confirm_ids_disjoint": true,
+  "official_test_ids_have_separate_namespace": true,
+  "completed_training_runs": 19,
+  "model_checkpoints": 19,
+  "prediction_npz_files": 37,
+  "frozen_official_models": 6,
+  "python_files_syntax_checked": 9,
+  "new_readme_and_html_local_links_exist": true,
+  "proposal": {
+    "current_title": "基于多方向特征融合的旋转鲁棒图像分类研究",
+    "word_preserved": true,
+    "pdf_pages": 2,
+    "word_pdf_text_equal": true,
+    "word_markdown_text_equal": true,
+    "reference_hyperlinks": 4,
+    "rendered_pages": 2,
+    "all_pages_visually_inspected": true
+  },
+  "training_or_gpu_inference_rerun": false
+}

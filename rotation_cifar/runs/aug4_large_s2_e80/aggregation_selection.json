@@ -1,0 +1,11 @@
+{
+  "selection_split": "dev",
+  "scores": {
+    "mean": 0.728,
+    "geometric": 0.7288,
+    "confidence": 0.7278,
+    "inverse_entropy": 0.7272,
+    "max_confidence": 0.728
+  },
+  "selected": "geometric"
+}

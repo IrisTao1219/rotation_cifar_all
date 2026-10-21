@@ -1,0 +1,46 @@
+{
+  "checked_utc": "2026-10-11T11:46:00.090427+00:00",
+  "remote_files_sha256_verified": 24,
+  "all_passed": true,
+  "prediction_shape": [
+    4,
+    10000,
+    10
+  ],
+  "labels_ids_probabilities_checked": true,
+  "accuracy_and_f1_recomputed": true,
+  "paired_bootstrap_recomputed": true,
+  "frozen_project_files_unchanged": true,
+  "rows": [
+    {
+      "seed": 1,
+      "fusion": "mean",
+      "baseline_accuracy": 0.7263,
+      "module_accuracy": 0.7421,
+      "corrected_errors": 806,
+      "new_errors": 648,
+      "net_additional_correct": 158,
+      "module_rotation_max_probability_difference": 0.0
+    },
+    {
+      "seed": 2,
+      "fusion": "geometric",
+      "baseline_accuracy": 0.7263,
+      "module_accuracy": 0.7451,
+      "corrected_errors": 879,
+      "new_errors": 691,
+      "net_additional_correct": 188,
+      "module_rotation_max_probability_difference": 0.0
+    },
+    {
+      "seed": 3,
+      "fusion": "mean",
+      "baseline_accuracy": 0.7362,
+      "module_accuracy": 0.7473,
+      "corrected_errors": 811,
+      "new_errors": 700,
+      "net_additional_correct": 111,
+      "module_rotation_max_probability_difference": 0.0
+    }
+  ]
+}

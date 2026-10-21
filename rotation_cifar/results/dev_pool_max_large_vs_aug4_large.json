@@ -1,0 +1,48 @@
+{
+  "split": "dev",
+  "epochs": 80,
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "original_image_count": 5000,
+  "methods": {
+    "aug4_large": {
+      "accuracy_by_seed": [
+        0.7312,
+        0.728,
+        0.736
+      ],
+      "mean_accuracy": 0.7317333333333332,
+      "sd_accuracy": 0.004026578365477738,
+      "mean_macro_f1": 0.7307607291081784
+    },
+    "pool_max_large": {
+      "accuracy_by_seed": [
+        0.744,
+        0.7534,
+        0.7524
+      ],
+      "mean_accuracy": 0.7499333333333332,
+      "sd_accuracy": 0.0051626866390798035,
+      "mean_macro_f1": 0.7494150929303361
+    }
+  },
+  "comparison": {
+    "candidate": "pool_max_large",
+    "reference": "aug4_large",
+    "difference_by_seed": [
+      0.0128,
+      0.0254,
+      0.0164
+    ],
+    "mean_difference": 0.0182,
+    "paired_image_and_seed_bootstrap_95_interval": [
+      0.008265000000000002,
+      0.028933333333333332
+    ],
+    "bootstrap_draws": 5000,
+    "bootstrap_units": "original images and paired training seeds; the four rotations are not independent samples"
+  }
+}

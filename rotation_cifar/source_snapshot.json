@@ -1,0 +1,8 @@
+{
+  "dataset": "CIFAR-10",
+  "files": {
+    "experiment.py": "804567a6c509b05db46f7c9190b85f5178da123c59c60fbbd38691ffd3577726",
+    "prepare_hf.py": "098e09af5aa2d6314ebbf426f0140f1d8667fa68bffd1dc49cae11fc05adcdfc",
+    "manifest.json": "88e846a05b0bef84556313d3209aeb8d5c72269f9bedcad2f05836ce64529018"
+  }
+}

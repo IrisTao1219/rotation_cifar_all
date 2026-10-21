@@ -1,0 +1,14 @@
+[
+  {
+    "path": "data/train.parquet",
+    "source": "/Users/cotigo/研一/上学期/机器学习/课程设计/新课题实证筛选_2026-10-11/rotation_cifar/data/train.parquet",
+    "bytes": 119705255,
+    "sha256": "8428b53a88a11ac374111006708df51469e315a22ac6d66470afd9c78d2ae883"
+  },
+  {
+    "path": "source_snapshot.json",
+    "source": "/Users/cotigo/研一/上学期/机器学习/课程设计/新课题实证筛选_2026-10-11/rotation_cifar/source_snapshot.json",
+    "bytes": 311,
+    "sha256": "f0ea6534630c8e66d13280f7b6041957c3cbd32ce2a1ac577f0c552c183b318f"
+  }
+]

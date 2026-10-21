@@ -1,0 +1,12 @@
+
+sent 3434 bytes  received 177192679 bytes  1771961130000 bytes/sec
+total size is 177138129  speedup is 1.00
+Number of files: 172
+Number of files transferred: 148
+Total file size: 177138129 B
+Total transferred file size: 177138129 B
+Unmatched data: 177138129 B
+Matched data: 0 B
+File list size: 4706 B
+Total sent: 3438 B
+Total received: 177171263 B

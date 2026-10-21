@@ -1,0 +1,12 @@
+{
+  "checked_utc": "2026-10-11T11:00:18.237971+00:00",
+  "pdf_pages": 2,
+  "six_required_sections_present": true,
+  "group_and_members": "待填写",
+  "docx_text_matches_markdown": true,
+  "pdf_text_matches_markdown": true,
+  "completed_experiment_outcome_numbers_in_proposal": false,
+  "all_pages_visually_reviewed": true,
+  "layout_findings": "Chinese glyphs, paragraph spacing, section flow and references checked; no missing glyphs, clipping or overlaps",
+  "main_idea_scope": "Shared multi-direction feature extraction and fusion; average, maximum or lightweight weighting retained as alternatives"
+}

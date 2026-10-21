@@ -1,0 +1,8 @@
+{
+  "split": "dev",
+  "seed": 1,
+  "direction_disagreement_rate_baseline": 0.3298,
+  "some_view_correct_but_tta_wrong": 467,
+  "baseline_wrong_module_right": 402,
+  "baseline_right_module_wrong": 338
+}

@@ -1,0 +1,104 @@
+{
+  "frozen_utc": "2026-10-11T11:33:50.456556+00:00",
+  "purpose": "One-time official CIFAR-10 test evaluation of existing frozen models; no retraining or test-based selection",
+  "source_files_sha256": {
+    "experiment.py": "e3be6fd8e25923b7d779001a1b0882afa45480ed3a21493e8d4f99f6362c13ab",
+    "manifest.json": "88e846a05b0bef84556313d3209aeb8d5c72269f9bedcad2f05836ce64529018",
+    "confirmation_lock.json": "0e450ab1c184d1da477bf463f4f8bfa29ddf386418c60ac0234e849333774d11"
+  },
+  "models": [
+    {
+      "run": "aug4_large_s1_e80",
+      "mode": "aug4_large",
+      "seed": 1,
+      "parameters": 256830,
+      "best_pt_sha256": "a604f49afbd77c11583f0087473db72c3f39e1a89ed17138c410a38935b22fd3",
+      "config_sha256": "554fd882531c659a1d3a51a4eeb4a88349f989c34a4ac83fbe52cc6a59a5607d",
+      "aggregation_selection_sha256": "06bbc8fa99661dd95fff47babd85f56898b5ea5198d753a1f91920123f10edff",
+      "fusion_selected_on_dev": "mean"
+    },
+    {
+      "run": "pool_max_large_s1_e80",
+      "mode": "pool_max_large",
+      "seed": 1,
+      "parameters": 256830,
+      "best_pt_sha256": "e6c5ad9efc35b7d482a2004c42f6de826d627ee49aed5ab6987d37c5850844ed",
+      "config_sha256": "2dfeebd464cda15a93a5481b843bb5d7b46f63d58012c9467f8f6a7d1f5e5f9b",
+      "fusion_selected_on_dev": "feature_max"
+    },
+    {
+      "run": "aug4_large_s2_e80",
+      "mode": "aug4_large",
+      "seed": 2,
+      "parameters": 256830,
+      "best_pt_sha256": "38cafe5922fc9f9d1fdff39f081eac0b0ad8ed782174e1a7330c3adb7cb527b6",
+      "config_sha256": "416d4fce8f0228f76dd60f5e41944be273e44759f9831d2172dd6f284fd018e0",
+      "aggregation_selection_sha256": "ce8eccf0d6f80edc36d2e3523f911e3bee945fcff306515b194e5b381ede9cd0",
+      "fusion_selected_on_dev": "geometric"
+    },
+    {
+      "run": "pool_max_large_s2_e80",
+      "mode": "pool_max_large",
+      "seed": 2,
+      "parameters": 256830,
+      "best_pt_sha256": "ff470e66857e662dfbc164ce05433032d2da27fd62518abeb449cf6602811026",
+      "config_sha256": "1fa611f922c178c46569c353f4a1489d097c66d5884a88f1c815a87d013ab0c9",
+      "fusion_selected_on_dev": "feature_max"
+    },
+    {
+      "run": "aug4_large_s3_e80",
+      "mode": "aug4_large",
+      "seed": 3,
+      "parameters": 256830,
+      "best_pt_sha256": "e00082a055ea5e0d649dbff6d49fe303b0c945e2e2a0b56c6b7bfb3058d74ae4",
+      "config_sha256": "9d81acca45562935e297fc10d8b99e17fc04253d4030ee5365965646d7d36582",
+      "aggregation_selection_sha256": "3f90518047aff3b5dc61f0cefe89aa4dc05366f490cf74d1310f2af48086b77b",
+      "fusion_selected_on_dev": "mean"
+    },
+    {
+      "run": "pool_max_large_s3_e80",
+      "mode": "pool_max_large",
+      "seed": 3,
+      "parameters": 256830,
+      "best_pt_sha256": "9e51331926f0ea449f831afc17ed4ca827a898cf417ccc03cc7812024876c4d9",
+      "config_sha256": "3e113029e4b63bd2959d98c3210636735c1ad3247ca405e25fa4ba25925e7aea",
+      "fusion_selected_on_dev": "feature_max"
+    }
+  ],
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "primary_comparison": "pool_max_large vs aug4_large with fusion already selected on development data",
+  "secondary_comparisons": [
+    "pool_max_large vs aug4_large probability average",
+    "original-orientation single-view accuracy of the same aug4_large checkpoint, descriptive only"
+  ],
+  "test_count": 10000,
+  "angles_degrees": [
+    0,
+    90,
+    180,
+    270
+  ],
+  "metrics": [
+    "accuracy",
+    "macro_f1",
+    "per_class_recall",
+    "per_class_f1",
+    "confusion",
+    "direction_disagreement"
+  ],
+  "statistics": {
+    "unit": "original test image",
+    "paired_seeds": true,
+    "bootstrap_draws": 5000,
+    "bootstrap_rng_seed": 20261011,
+    "interval": 95
+  },
+  "data_policy": "Official unfiltered 10000 test images; audit exact and quarter-turn duplicates against all 50000 training-source images; disclose overlap if any",
+  "no_test_tuning": true,
+  "original_training_image_count": 40000,
+  "retrain_on_full_50000": false
+}

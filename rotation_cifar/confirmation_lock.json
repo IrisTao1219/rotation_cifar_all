@@ -1,0 +1,33 @@
+{
+  "frozen_utc": "2026-10-11T10:12:25.394430+00:00",
+  "runs": [
+    "aug4_large_s1_e80",
+    "pool_max_large_s1_e80",
+    "aug4_large_s2_e80",
+    "pool_max_large_s2_e80",
+    "aug4_large_s3_e80",
+    "pool_max_large_s3_e80"
+  ],
+  "primary_candidate": "pool_max_large",
+  "primary_control": "aug4_large",
+  "epochs": 80,
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "development_scores": {
+    "aug4_large_s1_e80": 0.7312,
+    "pool_max_large_s1_e80": 0.744,
+    "aug4_large_s2_e80": 0.728,
+    "pool_max_large_s2_e80": 0.7534,
+    "aug4_large_s3_e80": 0.736,
+    "pool_max_large_s3_e80": 0.7524
+  },
+  "source_sha256": {
+    "experiment.py": "e3be6fd8e25923b7d779001a1b0882afa45480ed3a21493e8d4f99f6362c13ab",
+    "manifest.json": "88e846a05b0bef84556313d3209aeb8d5c72269f9bedcad2f05836ce64529018"
+  },
+  "decision": "Three paired development seeds positive; confirm once with development-selected checkpoints. No changes after confirmation.",
+  "scope": "CIFAR-10 training-split holdout, C4 rotation stress test, not official test or academic novelty claim"
+}
