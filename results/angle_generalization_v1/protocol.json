@@ -1,0 +1,90 @@
+{
+  "status": "complete",
+  "data": "/home/taosha/rotation_cifar_all/\u5b98\u65b9\u6d4b\u8bd5_2026-10-11/data/official_test.npz",
+  "data_sha256": "649e30712f51fc83b9225d31c8908c09c973b1a74ac47bb34ded9355a7c609d3",
+  "script_sha256": "17c4ed36a4fc13974ff1a6a16717eddc703f4dd7b0999cad00cde42752a12401",
+  "experiment_sha256": "e3be6fd8e25923b7d779001a1b0882afa45480ed3a21493e8d4f99f6362c13ab",
+  "angles": [
+    0,
+    15,
+    30,
+    45,
+    60,
+    75,
+    90,
+    105,
+    120,
+    135,
+    150,
+    165,
+    180,
+    195,
+    210,
+    225,
+    240,
+    255,
+    270,
+    285,
+    300,
+    315,
+    330,
+    345
+  ],
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "models": [
+    {
+      "run": "aug4_large_s1_e80",
+      "mode": "aug4_large",
+      "seed": 1,
+      "fusion": "mean",
+      "checkpoint_sha256": "a604f49afbd77c11583f0087473db72c3f39e1a89ed17138c410a38935b22fd3"
+    },
+    {
+      "run": "aug4_large_s2_e80",
+      "mode": "aug4_large",
+      "seed": 2,
+      "fusion": "geometric",
+      "checkpoint_sha256": "38cafe5922fc9f9d1fdff39f081eac0b0ad8ed782174e1a7330c3adb7cb527b6"
+    },
+    {
+      "run": "aug4_large_s3_e80",
+      "mode": "aug4_large",
+      "seed": 3,
+      "fusion": "mean",
+      "checkpoint_sha256": "e00082a055ea5e0d649dbff6d49fe303b0c945e2e2a0b56c6b7bfb3058d74ae4"
+    },
+    {
+      "run": "pool_max_large_s1_e80",
+      "mode": "pool_max_large",
+      "seed": 1,
+      "fusion": "feature_max",
+      "checkpoint_sha256": "e6c5ad9efc35b7d482a2004c42f6de826d627ee49aed5ab6987d37c5850844ed"
+    },
+    {
+      "run": "pool_max_large_s2_e80",
+      "mode": "pool_max_large",
+      "seed": 2,
+      "fusion": "feature_max",
+      "checkpoint_sha256": "ff470e66857e662dfbc164ce05433032d2da27fd62518abeb449cf6602811026"
+    },
+    {
+      "run": "pool_max_large_s3_e80",
+      "mode": "pool_max_large",
+      "seed": 3,
+      "fusion": "feature_max",
+      "checkpoint_sha256": "9e51331926f0ea449f831afc17ed4ca827a898cf417ccc03cc7812024876c4d9"
+    }
+  ],
+  "rotation": "counterclockwise; bilinear residual in [0,90), then exact quarter turn; black fill; fixed 32x32; rotate before normalization",
+  "inference": "unchanged four-view baseline fusion / four-view feature max; no retraining",
+  "scope": "post-hoc supplementary evaluation on already used official test set; no model selection",
+  "device": "cuda",
+  "python": "3.10.21 (main, Aug 27 2026, 14:42:07) [GCC 14.3.0]",
+  "torch": "2.5.1+cu121",
+  "numpy": "1.26.4",
+  "bootstrap_draws": 5000
+}
