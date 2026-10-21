@@ -1,0 +1,93 @@
+{
+  "date": "2026-10-21",
+  "gpu": "NVIDIA A800",
+  "gpu_source": "user_confirmed",
+  "metric": "best development-set tta_accuracy across 80 epochs; baseline probability mean",
+  "new_results_root": "复现实验/rotation_cifar/runs",
+  "runs": [
+    {
+      "run": "aug4_large_s1_e80",
+      "original_dev_accuracy": 0.7312,
+      "a800_dev_accuracy": 0.7288,
+      "difference_percentage_points": -0.24,
+      "epochs_verified": 80,
+      "config_equal": true,
+      "source_sha256": {
+        "config.json": "554fd882531c659a1d3a51a4eeb4a88349f989c34a4ac83fbe52cc6a59a5607d",
+        "complete.json": "78d60e4d9ff426ea10f69801e55c727ebb4feb4826121b4bb5d3fd692ba4aa5d",
+        "progress.jsonl": "730198f629e6101a295d55e8aa82781266e9e4279df3758aba9776b61aee80fa"
+      }
+    },
+    {
+      "run": "aug4_large_s2_e80",
+      "original_dev_accuracy": 0.728,
+      "a800_dev_accuracy": 0.723,
+      "difference_percentage_points": -0.5,
+      "epochs_verified": 80,
+      "config_equal": true,
+      "source_sha256": {
+        "config.json": "416d4fce8f0228f76dd60f5e41944be273e44759f9831d2172dd6f284fd018e0",
+        "complete.json": "8c8bd9a30841c81c716436fb5d412a250e030887643edc71b350cc2b221b8969",
+        "progress.jsonl": "71826731d676c95fdce2f103740d08316a2a48037c1e64981fc4fe66186bd27b"
+      }
+    },
+    {
+      "run": "aug4_large_s3_e80",
+      "original_dev_accuracy": 0.736,
+      "a800_dev_accuracy": 0.7282,
+      "difference_percentage_points": -0.78,
+      "epochs_verified": 80,
+      "config_equal": true,
+      "source_sha256": {
+        "config.json": "9d81acca45562935e297fc10d8b99e17fc04253d4030ee5365965646d7d36582",
+        "complete.json": "04cbee41b7fb50a52518506fe85bd84b40b95ea327ced5174668720fea73062b",
+        "progress.jsonl": "57c9fbba45c66fe20b3ef66c1cff5306d663f8b5d22407b65c6fabfd1f923772"
+      }
+    },
+    {
+      "run": "pool_max_large_s1_e80",
+      "original_dev_accuracy": 0.744,
+      "a800_dev_accuracy": 0.742,
+      "difference_percentage_points": -0.2,
+      "epochs_verified": 80,
+      "config_equal": true,
+      "source_sha256": {
+        "config.json": "2dfeebd464cda15a93a5481b843bb5d7b46f63d58012c9467f8f6a7d1f5e5f9b",
+        "complete.json": "ce9c7c1724b80b118e408b446310b24afb5f0105ed84d710776c7dd0cd901df9",
+        "progress.jsonl": "c55eb616721b13a83d572278d64a9c94720d02dbaa89ad9c25533ccef6bcc142"
+      }
+    },
+    {
+      "run": "pool_max_large_s2_e80",
+      "original_dev_accuracy": 0.7534,
+      "a800_dev_accuracy": 0.7588,
+      "difference_percentage_points": 0.54,
+      "epochs_verified": 80,
+      "config_equal": true,
+      "source_sha256": {
+        "config.json": "1fa611f922c178c46569c353f4a1489d097c66d5884a88f1c815a87d013ab0c9",
+        "complete.json": "d220405cbe7e9b11182ac43781843b599fa3affd9a17454e393625a22636cef5",
+        "progress.jsonl": "8a904bd6529d95ab3493a1daa3faf7cc275a5716dc6e46fb5f453ec328598fcd"
+      }
+    },
+    {
+      "run": "pool_max_large_s3_e80",
+      "original_dev_accuracy": 0.7524,
+      "a800_dev_accuracy": 0.7536,
+      "difference_percentage_points": 0.12,
+      "epochs_verified": 80,
+      "config_equal": true,
+      "source_sha256": {
+        "config.json": "3e113029e4b63bd2959d98c3210636735c1ad3247ca405e25fa4ba25925e7aea",
+        "complete.json": "aa2f25e8cd5bb3277e5bab81f150d584db4fe8a65ad2199823994f1fdbd5c30a",
+        "progress.jsonl": "6b17feea657e56ec2a260e82ecbdf500eaad366e029bc9e46d569460be5afb5b"
+      }
+    }
+  ],
+  "limitations": [
+    "new runtime versions unavailable",
+    "actual data hashes not verified",
+    "new checkpoints and per-image predictions not synced",
+    "new confirm and official-test evaluations unavailable"
+  ]
+}
