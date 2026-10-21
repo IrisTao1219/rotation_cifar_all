@@ -1,0 +1,11 @@
+{
+  "updated_on": "2026-10-21",
+  "experiment": "angle_generalization_v1",
+  "csv_rows": 144,
+  "csv_vs_json": "passed",
+  "zero_degree_vs_previous_official": "six models exactly equal",
+  "hash_verification": "data, six checkpoints, evaluate_angles.py and experiment.py matched full delivery copy",
+  "prediction_npz_synced": false,
+  "bootstrap_independently_recomputed": false,
+  "note": "Original training and official-test machine outputs unchanged. Supplementary output moved to rotation_cifar/results; analysis documents updated."
+}
